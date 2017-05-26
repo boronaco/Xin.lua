@@ -11,7 +11,7 @@ function XinZhao:LoadSpells()
   	Q = { range = myHero:GetSpellData(_Q).range, delay = myHero:GetSpellData(_Q).delay, speed = myHero:GetSpellData(_Q).speed, width = myHero:GetSpellData(_Q).width }
 	W = { range = myHero:GetSpellData(_W).range, delay = myHero:GetSpellData(_W).delay, speed = myHero:GetSpellData(_W).speed, width = myHero:GetSpellData(_W).width }
 	E = { range = myHero:GetSpellData(_E).range, delay = myHero:GetSpellData(_E).delay, speed = myHero:GetSpellData(_E).speed, width = myHero:GetSpellData(_E).width }
-	R = { range = myHero:GetSpellData(_R).range, delay = myHero:GetSpellData(_R).delay, speed = myHero:GetSpellData(_R).speed, width = myHero:GetSpellData(_R).width }
+	
 end
 
 function XinZhao:LoadMenu()
@@ -19,7 +19,7 @@ function XinZhao:LoadMenu()
     			Q = "https://vignette2.wikia.nocookie.net/leagueoflegends/images/0/07/Three_Talon_Strike.png",
     			W = "https://vignette3.wikia.nocookie.net/leagueoflegends/images/0/03/Battle_Cry.png",
     			E = "https://vignette1.wikia.nocookie.net/leagueoflegends/images/d/d7/Audacious_Charge.png",
-                    	R = "https://vignette2.wikia.nocookie.net/leagueoflegends/images/6/69/Crescent_Sweep.png" }
+                    	
 	-- Main Menu -------------------------------------------------------------------------------------------------------------------
   	self.Menu = MenuElement({type = MENU, id = "Menu", name = "The Ripper Series", leftIcon = Icons.C})
 	-- XinZhao ---------------------------------------------------------------------------------------------------------------------
@@ -29,8 +29,7 @@ function XinZhao:LoadMenu()
   	self.Menu.Ripper.Combo:MenuElement({id = "Q", name = "Use Q", value = true, leftIcon = Icons.Q})
   	self.Menu.Ripper.Combo:MenuElement({id = "W", name = "Use W", value = true, leftIcon = Icons.W})
   	self.Menu.Ripper.Combo:MenuElement({id = "E", name = "Use E", value = true, leftIcon = Icons.E})
-  	self.Menu.Ripper.Combo:MenuElement({id = "R", name = "Use R", value = true, leftIcon = Icons.R})
-	self.Menu.Ripper.Combo:MenuElement({id = "ER", name = "Min enemies to use R", value = 2, min = 1, max = 5})
+  	
 	
 	-- JungleClear -----------------------------------------------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "JungleClear", name = "Jungle Clear"})
@@ -44,11 +43,6 @@ function XinZhao:LoadMenu()
   	self.Menu.Ripper.KS:MenuElement({id = "E", name = "Use E", value = true, leftIcon = Icons.E})
   	
 	
-	-- Misc ------------------------------------------------------------------------------------------------------------------------
-  	self.Menu.Ripper:MenuElement({type = MENU, id = "Misc", name = "Misc"})
-  	self.Menu.Ripper.Misc:MenuElement({id = "AutoR", name = "Auto R", value = false, leftIcon = Icons.R})
-	self.Menu.Ripper.Misc:MenuElement({id = "EAutoR", name = "Enemies to auto R", value = 4, min = 1, max = 5})
-  	self.Menu.Ripper.Misc:MenuElement({id = "Key", name = "Auto R Key", key = string.byte(" ")})
 	
 end
 
@@ -66,12 +60,9 @@ function XinZhao:Tick()
     	elseif Clear then
     	self:LaneClear()
     	self:JungleClear()
-    	elseif Harass then
-    	self:Harass()
-    	elseif Flee then
-    	self:Flee()
-    	elseif self.Menu.Ripper.Misc.Key:Value() then
-    	self:AutoR()
+    	
+    	
+    	
     	end
 	self:KS()
 end
@@ -119,11 +110,8 @@ function XinZhao:Combo()
   	if self:IsValidTarget(target,125) and myHero.pos:DistanceTo(target.pos) < 125 and self.Menu.Ripper.Combo.Q:Value() and self:Ready(_Q) then
     	Control.CastSpell(HK_Q)
     	end
-  	if self:IsValidTarget(target,R.range) and myHero.pos:DistanceTo(target.pos) < R.range and self.Menu.Ripper.Combo.R:Value() and self:Ready(_R) then
-    	if self:CountEnemys(R.range) >= self.Menu.Ripper.Combo.ER:Value() then
-    	Control.CastSpell(HK_R)
-      	end
-    	end
+  	
+    	
 end
 
 function XinZhao:GetValidMinion(range)
@@ -232,15 +220,6 @@ function XinZhao:LaneClear()
 end
 
 
-function XinZhao:AutoR()
-  	if self:GetValidEnemy(R.range) == false then return end
-  	if (not _G.SDK and not _G.GOS and not _G.EOWLoaded) then return end
-  	if self:Ready(_R) and self.Menu.Ripper.Misc.AutoR:Value() then
-    	if self:CountEnemys(R.range) >= self.Menu.Ripper.Misc.EAutoR:Value() then
-      	Control.CastSpell(HK_R)
-      	end
-    	end
-end
 
 
 
@@ -255,13 +234,7 @@ function XinZhao:KS()
   	Control.CastSpell(HK_E,target)
 	end
 	end
-	if self:IsValidTarget(target,R.range) and myHero.pos:DistanceTo(target.pos) < R.range and self.Menu.Ripper.KS.R:Value() and self:Ready(_R) then
-    	local level = myHero:GetSpellData(_R).level
-    	local Rdamage = CalcMagicalDamage(myHero, target, (({150, 250, 350})[level] + (0.7 * myHero.ap)))
-	if Rdamage >= self:HpPred(target,1) + target.hpRegen * 2 then
-  	Control.CastSpell(HK_R)
-	end
-	end
+	
 end
 
 
