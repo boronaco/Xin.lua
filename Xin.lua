@@ -4,7 +4,7 @@ function XinZhao:__init()
 	self:LoadSpells()
   	self:LoadMenu() 
   	Callback.Add("Tick", function() self:Tick() end)
-  	Callback.Add("Draw", function() self:Draw() end) 
+  	
 end
 
 function XinZhao:LoadSpells() 
