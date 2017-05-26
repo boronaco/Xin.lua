@@ -1,5 +1,3 @@
-# Xin.lua
-XInJG
 class "XinZhao" 
 function XinZhao:__init() 
 	self:LoadSpells()
