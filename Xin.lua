@@ -14,12 +14,7 @@ function XinZhao:LoadSpells()
 	
 end
 
-function XinZhao:LoadMenu()
-  	local Icons = { C = "https://vignette3.wikia.nocookie.net/leagueoflegends/images/6/63/Xin_ZhaoSquare.png",
-    			Q = "https://vignette2.wikia.nocookie.net/leagueoflegends/images/0/07/Three_Talon_Strike.png",
-    			W = "https://vignette3.wikia.nocookie.net/leagueoflegends/images/0/03/Battle_Cry.png",
-    			E = "https://vignette1.wikia.nocookie.net/leagueoflegends/images/d/d7/Audacious_Charge.png",
-                    	
+
 	-- Main Menu -------------------------------------------------------------------------------------------------------------------
   	self.Menu = MenuElement({type = MENU, id = "Menu", name = "The Ripper Series", leftIcon = Icons.C})
 	-- XinZhao ---------------------------------------------------------------------------------------------------------------------
