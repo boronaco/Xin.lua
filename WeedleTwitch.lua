@@ -3,7 +3,7 @@
 	local WeedleTwitch = MenuElement({type = MENU, id = "WeedleTwitch", name = "Twitch by Weedle"})
 	WeedleTwitch:MenuElement({type = MENU, id = "Spells", name = "Spell Settings"})
 	WeedleTwitch:MenuElement({type = MENU, id = "Items", name = "Items Settings"})
-	WeedleTwitch:MenuElement({type = MENU, id = "Drawing", name = "Draw Settings"})
+	
 	WeedleTwitch:MenuElement({type = SPACE, name = "Version 0.420"})
 	--Neccesarities
 	local function Ready(spell)
