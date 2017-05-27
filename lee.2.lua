@@ -37,7 +37,7 @@ LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("K")})
 --WardJump
 LeeSinMenu:MenuElement({type = MENU, id = "WardJump", name = "WardJump", leftIcon = W.icon})
-LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("s")})
+LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("a")})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AW", name = "Ward Jump AnyWay", value = false, leftIcon = W.icon})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AMR", name = "Ward Jump Only At Max Range", value = false, leftIcon = W.icon})
 --SmiteQ
