@@ -91,16 +91,7 @@ function OnLoad()
 	end
 end
 
-local function DrawSmiteableMinion(type,minion)
-	if not type or not SmiteMenu.SmiteMarker[type] then
-		return
-	end
-	if SmiteMenu.SmiteMarker[type]:Value() then
-		if minion.pos2D.onScreen then
-			Draw.Circle();
-		end
-	end
-end
+
 
 local function AutoSmiteMinion(type,minion)
 	if not type or not SmiteMenu.AutoSmiter[type] then
