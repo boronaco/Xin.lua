@@ -394,7 +394,7 @@
 			WeedleTwitch.Items.YG.Draw:MenuElement({id = "Width", name = "Width", value = 1, min = 1, max = 5, step = 1})
 			WeedleTwitch.Items.YG.Draw:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 255, 255, 255)})
 
-	WeedleTwitch.Drawing:MenuElement({id = "Enabled", name = "Enable all Drawings", value = true})
+	WeedleTwitch.Drawing:MenuElement({id = "Enabled", name = "Enable all Drawings", value = false})
 	WeedleTwitch.Drawing:MenuElement({id = "DMG", name = "Draw Edmg", value = true})
 	WeedleTwitch.Drawing:MenuElement({id = "Toggle", name = "Draw E Toggle Mode", value = true})
 	WeedleTwitch.Drawing:MenuElement({id = "WD", name = "Draw W range", type = MENU})
@@ -713,9 +713,9 @@
 			local textPos = myHero.pos:To2D()
 				if WeedleTwitch.Drawing.Toggle:Value() then 
 					if WeedleTwitch.Spells.ES.ET:Value() then
-						Draw.Text("E Toggle OFF", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 000, 255, 000))
+						Draw.Text("E Toggle ON", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 000, 255, 000))
 					elseif not WeedleTwitch.Spells.ES.ET:Value() then
-						Draw.Text("E Toggle ON", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 000, 000)) 
+						Draw.Text("E Toggle OFF", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 000, 000)) 
 					end
 				end
 				if WeedleTwitch.Drawing.WD.Enabled:Value() then
