@@ -510,7 +510,7 @@ function Ahri:Combo()
         	end
     	end 
     end
-end
+
 
 function Ahri:Harass()
     if target == nil then return end	
