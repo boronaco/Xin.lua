@@ -16,7 +16,7 @@ local challengerIcon="http://4.bp.blogspot.com/-CsEIhRh74bE/VfRlhyvNjXI/AAAAAAAA
 -- Menu
 local LeeSinMenu = MenuElement({type = MENU, id = "LeeSinMenu", name = "LeeSin", leftIcon = "l"})
 --Combo
-LeeSinMenu:MenuElement({type = MENU, id = "Combo", name = "Combo Menu", leftIcon = "http://news.cdn.leagueoflegends.com/public/images/articles/2015/march_2015/upn/orbitallaser.jpg"})
+LeeSinMenu:MenuElement({type = MENU, id = "Combo", name = "Combo Menu", leftIcon = "1"})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "W", name = "Use W", value = true, leftIcon = W.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
@@ -24,13 +24,13 @@ LeeSinMenu.Combo:MenuElement({type = PARAM, id = "P", name = "Use Passive", valu
 --LeeSinMenu.Combo:MenuElement({type = PARAM, id = "PS", name = "Passive Stacks To Use", value = 2,min=1,may=2, leftIcon = P.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "WJ", name = " WardJump As Gapclose", value = true, leftIcon = wardIcon})
 --JungleClear
-LeeSinMenu:MenuElement({type = MENU, id = "JungleClear", name = "JungleClear Menu", leftIcon = "http://3.bp.blogspot.com/-AIpsCUj6Fbo/VUkO1shYyjI/AAAAAAAApcA/YubY3joYf70/s1600/profileIcon847.png"})
+LeeSinMenu:MenuElement({type = MENU, id = "JungleClear", name = "JungleClear Menu", leftIcon = "1"})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "W", name = "Use W", value = true, leftIcon = W.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "P", name = "Use Passive", value = true, leftIcon = P.icon})
 --InSec
-LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS", leftIcon = "http://guides.gamepressure.com/lol/gfx/word/1057761971.png"})
+LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS", leftIcon = "1"})
 --LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("Y")})
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("X")})
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("C")})
@@ -43,12 +43,12 @@ LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AMR", name = "Ward Jump Onl
 --SmiteQ
 LeeSinMenu:MenuElement({type = PARAM, id = "SmiteQ", name = "Smite-Q", value = true, leftIcon = smiteIcon})
 --KillSecure
-LeeSinMenu:MenuElement({type = MENU, id = "KillSecure", name = " KillSecure Menu", leftIcon = "http://www.freeiconspng.com/uploads/troll-face-png-2.png"})
+LeeSinMenu:MenuElement({type = MENU, id = "KillSecure", name = " KillSecure Menu", leftIcon = "1"})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "R", name = "Use R", value = true, leftIcon = R.icon})
 --Drawings
-LeeSinMenu:MenuElement({type = MENU, id = "Drawings", name = "Drawings", leftIcon = "http://photoservice.gamesao.vn/Resources/Upload/Images/Editor/33/Li%C3%AAn%20Minh%20Huy%E1%BB%81n%20Tho%E1%BA%A1i/C%E1%BA%ADp%20nh%E1%BA%ADt%20tin%20t%E1%BB%A9c%20ng%C3%A0y%2017%20th%C3%A1ng%206%20n%C4%83m%202015/15.1.png"})
+LeeSinMenu:MenuElement({type = MENU, id = "Drawings", name = "Drawings", leftIcon = "1"})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "KP", name = "Draw Kick Path", value = false, leftIcon = R.icon})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "ISJP", name = "Draw InSec Jump Pos", value = false, leftIcon = W.icon})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "WJR", name = "Draw Ward Jump Range", value = false, leftIcon = W.icon})
