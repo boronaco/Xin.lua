@@ -353,7 +353,7 @@
 		self:Menu() 
 		self:GetOrb()
 		QBuff = false
-		print("Twitch by Weedle Loaded succesfully")	
+		print(".")	
 	end
 
 	function WeedleTwitch:Menu()
