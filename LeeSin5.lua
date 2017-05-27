@@ -701,4 +701,4 @@ function OnDraw()
 	end
 end
 --
-print("External LeeSin v1.122 Loaded!")
+print(".")
