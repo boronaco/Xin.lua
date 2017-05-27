@@ -481,6 +481,6 @@ function Annie:Draw()
 end
     
 function OnLoad()
-    if myHero.charName ~= "Annie" then return end
+    if myHero.charName ~= "." then return end
 	Annie()
 end
