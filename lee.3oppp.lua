@@ -643,20 +643,7 @@ function OnTick()
 	if LeeSinMenu.InSec.InSecS:Value() then
 		InSec(kickToPos)
 	end
-end
-local screenX,screenY=Game.Resolution().x,Game.Resolution().y
-function OnDraw()
-	Draw.Circle(kickToPos,200,Draw.Color(255,255, 153, 0))
-	Draw.Circle(kickToPos,100)--
-	if not myHero.dead and not myHero.isImmortal then
-		if LeeSinMenu.Drawings.W:Value() then
-			for i=1,Game.WardCount() do
-				local ward=Game.Ward(i)
-				if not ward.dead and ward.distance<=1300 then
-					Draw.Circle(ward.pos,100)
-				end
-			end
-		end
+
 		
 --
 print(".")
