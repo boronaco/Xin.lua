@@ -300,14 +300,6 @@ function XinZhao:KS()
 	end
 end
 
-function XinZhao:Draw()
-	if myHero.dead then return end
-	if self.Menu.Ripper.Drawings.E:Value() then Draw.Circle(myHero.pos, 650, self.Menu.Ripper.Drawings.Width:Value(), self.Menu.Ripper.Drawings.Color:Value())
-	end
-	if self.Menu.Ripper.Drawings.R:Value() then Draw.Circle(myHero.pos, R.range, self.Menu.Ripper.Drawings.Width:Value(), self.Menu.Ripper.Drawings.Color:Value())	
-	end	
-end
-  
 function OnLoad()
     	if myHero.charName ~= "XinZhao" then return end
 	XinZhao()
