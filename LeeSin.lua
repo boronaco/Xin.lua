@@ -31,13 +31,13 @@ LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "E", name = "Use E", valu
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "P", name = "Use Passive", value = true, leftIcon = P.icon})
 --InSec
 LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS", leftIcon = "http://guides.gamepressure.com/lol/gfx/word/1057761971.png"})
---LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("-")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("*")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("/")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("0")})
+--LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("Y")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("X")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("C")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("K")})
 --WardJump
 LeeSinMenu:MenuElement({type = MENU, id = "WardJump", name = "WardJump", leftIcon = W.icon})
-LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("+")})
+LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("S")})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AW", name = "Ward Jump AnyWay", value = false, leftIcon = W.icon})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AMR", name = "Ward Jump Only At Max Range", value = false, leftIcon = W.icon})
 --SmiteQ
@@ -701,4 +701,4 @@ function OnDraw()
 	end
 end
 --
-print("External LeeSin v1.122 Loaded!")
+print(".")
