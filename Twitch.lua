@@ -389,26 +389,7 @@
 	WeedleTwitch.Items:MenuElement({id = "YG", name = "Youmuu's Ghostblade", type = MENU, })
 		WeedleTwitch.Items.YG:MenuElement({id = "Combo", name = "Enable in Combo", value = true})
 		WeedleTwitch.Items.YG:MenuElement({id = "R", name = "Min Enemy Distance", value = 1000, min = 0, max = 2000, step = 100})
-		WeedleTwitch.Items.YG:MenuElement({id = "Draw", name = "Draw Settings", type = MENU})
-			WeedleTwitch.Items.YG.Draw:MenuElement({id = "Enabled", name = "Enabled", value = false})
-			WeedleTwitch.Items.YG.Draw:MenuElement({id = "Width", name = "Width", value = 1, min = 1, max = 5, step = 1})
-			WeedleTwitch.Items.YG.Draw:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 255, 255, 255)})
-
-	WeedleTwitch.Drawing:MenuElement({id = "Enabled", name = "Enable all Drawings", value = true})
-	WeedleTwitch.Drawing:MenuElement({id = "DMG", name = "Draw Edmg", value = true})
-	WeedleTwitch.Drawing:MenuElement({id = "Toggle", name = "Draw E Toggle Mode", value = true})
-	WeedleTwitch.Drawing:MenuElement({id = "WD", name = "Draw W range", type = MENU})
-	    WeedleTwitch.Drawing.WD:MenuElement({id = "Enabled", name = "Enabled", value = true})       
-	    WeedleTwitch.Drawing.WD:MenuElement({id = "Width", name = "Width", value = 1, min = 1, max = 5, step = 1})
-	    WeedleTwitch.Drawing.WD:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 255, 255, 255)})
-	WeedleTwitch.Drawing:MenuElement({id = "ED", name = "Draw E range", type = MENU})
-	    WeedleTwitch.Drawing.ED:MenuElement({id = "Enabled", name = "Enabled", value = true})       
-	    WeedleTwitch.Drawing.ED:MenuElement({id = "Width", name = "Width", value = 1, min = 1, max = 5, step = 1})
-	    WeedleTwitch.Drawing.ED:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 255, 255, 255)})
-	WeedleTwitch.Drawing:MenuElement({id = "RD", name = "Draw R range", type = MENU})
-	    WeedleTwitch.Drawing.RD:MenuElement({id = "Enabled", name = "Enabled", value = true})       
-	    WeedleTwitch.Drawing.RD:MenuElement({id = "Width", name = "Width", value = 1, min = 1, max = 5, step = 1})
-	    WeedleTwitch.Drawing.RD:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 255, 255, 255)}) 
+		
 	end
 
 	function WeedleTwitch:Tick()
@@ -707,7 +688,48 @@
 	return Pdmg
 	end
 
-	
+	function WeedleTwitch:Draw()
+		if not myHero.dead then
+			if WeedleTwitch.Drawing.Enabled:Value() then
+			local textPos = myHero.pos:To2D()
+				if WeedleTwitch.Drawing.Toggle:Value() then 
+					if WeedleTwitch.Spells.ES.ET:Value() then
+						Draw.Text("E Toggle ON", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 000, 255, 000))
+					elseif not WeedleTwitch.Spells.ES.ET:Value() then
+						Draw.Text("E Toggle OFF", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 000, 000)) 
+					end
+				end
+				if WeedleTwitch.Drawing.WD.Enabled:Value() then
+					Draw.Circle(myHero.pos, 950, WeedleTwitch.Drawing.WD.Width:Value(), WeedleTwitch.Drawing.WD.Color:Value())	
+				end
+				if WeedleTwitch.Drawing.ED.Enabled:Value() then
+					Draw.Circle(myHero.pos, 1200, WeedleTwitch.Drawing.ED.Width:Value(), WeedleTwitch.Drawing.ED.Color:Value())	
+				end
+				if WeedleTwitch.Drawing.RD.Enabled:Value() then
+					Draw.Circle(myHero.pos, 850, WeedleTwitch.Drawing.RD.Width:Value(), WeedleTwitch.Drawing.RD.Color:Value())	
+				end
+				if WeedleTwitch.Items.YG.Draw.Enabled:Value() then
+					Draw.Circle(myHero.pos, WeedleTwitch.Items.YG.R:Value(), WeedleTwitch.Items.YG.Draw.Width:Value(), WeedleTwitch.Items.YG.Draw.Color:Value())	
+				end
+				if WeedleTwitch.Drawing.DMG:Value() then
+				local target = TwitchTarget(1300)
+				if target == nil then return end
+				local Edmg = WeedleTwitch:Edmg(target)
+				local Pdmg = WeedleTwitch:Pdmg(target)
+					if Edmg > target.health then 
+						Draw.Text("E Damage ".. target.charName .." :" .. tostring(math.floor(Edmg + (Pdmg/6))), 20, textPos.x - 80, textPos.y + 40, Draw.Color(255, 000, 255, 000))
+					end
+					if Edmg + Pdmg > target.health and Edmg < target.health then
+						Draw.Text("E Damage ".. target.charName .." :".. tostring(math.floor(Edmg + (Pdmg/6))), 20, textPos.x - 80, textPos.y + 40, Draw.Color(255, 000, 000, 205))						
+					end
+					if Edmg + Pdmg < target.health then
+						Draw.Text("E Damage ".. target.charName .." :" .. tostring(math.floor(Edmg + (Pdmg/6))), 20, textPos.x - 80, textPos.y + 40, Draw.Color(255, 255, 000, 000))
+					end
+				end				
+			end
+		end
+	end
+
 	function OnLoad()
 	    WeedleTwitch:__init()
 	end
