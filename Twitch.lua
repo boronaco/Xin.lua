@@ -687,9 +687,3 @@
 	local Pdmg = p * Count * 6
 	return Pdmg
 	end
-
-	
-
-	function OnLoad()
-	    WeedleTwitch:__init()
-	end
