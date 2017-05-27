@@ -460,6 +460,11 @@ end
 
 function Ahri:Combo()
     if target == nil then return end	
+    if KoreanMechanics.Combo.RS.R:Value() and Ready() and target.distance < KoreanMechanics.Combo.RS.RD:Value() and (myHero.mana/myHero.maxMana >= KoreanMechanics.Combo.MM.RMana:Value() / 100) then
+        if target.valid and not target.dead and target.health/target.maxHealth <= KoreanMechanics.Combo.RS.RHP:Value()/100 then
+            KoreanCast(HK_R, Game.mousePos(), KoreanMechanics.AS.RAS:Value())
+        end
+    end
     if KoreanMechanics.Combo.E:Value() and Ready(_E) and (myHero.mana/myHero.maxMana >= KoreanMechanics.Combo.MM.EMana:Value() / 100) then
         if KoreanCanCast(_E) then 
             KoreanCast(HK_E, KoreanPred(target, _E), KoreanMechanics.AS.EAS:Value())
@@ -499,11 +504,11 @@ function Ahri:Combo()
         	if IsValidTarget(target, 600, true, myHero) and target.health/target.maxHealth <= KoreanMechanics.Combo.IS.IHP:Value()/100 then
            		 Control.CastSpell(HK_SUMMONER_2, target)
        		end
-		elseif  KoreanMechanics.Combo.IS.IMode:Value() == 1 and myHero:GetSpellData(SUMMONER_1).name == "SummonerDot" and Ready(SUMMONER_1) and not Ready(_Q) and not Ready(_R) then
+		elseif  KoreanMechanics.Combo.IS.IMode:Value() == 1 and myHero:GetSpellData(SUMMONER_1).name == "SummonerDot" and Ready(SUMMONER_1) and not Ready(_Q) and not Ready() then
        	 	if IsValidTarget(target, 600, true, myHero) and 50+20*myHero.levelData.lvl > target.health*1.1 then
            		Control.CastSpell(HK_SUMMONER_1, target)
        	 	end
-		elseif KoreanMechanics.Combo.IS.IMode:Value() == 1  and myHero:GetSpellData(SUMMONER_2).name == "SummonerDot" and Ready(SUMMONER_2) and not Ready(_Q) and not Ready(_R) then
+		elseif KoreanMechanics.Combo.IS.IMode:Value() == 1  and myHero:GetSpellData(SUMMONER_2).name == "SummonerDot" and Ready(SUMMONER_2) and not Ready(_Q) and not Ready() then
        		 if IsValidTarget(target, 600, true, myHero) and 50+20*myHero.levelData.lvl > target.health*1.1 then
            		Control.CastSpell(HK_SUMMONER_2, target)
         	end
