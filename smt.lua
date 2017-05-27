@@ -97,7 +97,7 @@ local function DrawSmiteableMinion(type,minion)
 	end
 	if SmiteMenu.SmiteMarker[type]:Value() then
 		if minion.pos2D.onScreen then
-			Draw.Circle(minion.pos,minion.boundingRadius,6,Draw.Color(0xFF00FF00));
+			Draw.Circle(minion.pos,minion.boundingRadius,6,Draw.Color(alpha));
 		end
 	end
 end
