@@ -358,7 +358,7 @@
 
 	function WeedleTwitch:Menu()
 	WeedleTwitch.Spells:MenuElement({id = "QS", name = "Q Settings", type = MENU})
-		WeedleTwitch.Spells.QS:MenuElement({id = "Q", name = "Enable Q in Flee/Recall", value = true})	
+		WeedleTwitch.Spells.QS:MenuElement({id = "Q", name = "Enable Q in Flee/Recall", value = false})	
 		WeedleTwitch.Spells.QS:MenuElement({id = "RK", name = "Stealth Recall Key", key = "N"})
 		WeedleTwitch.Spells.QS:MenuElement({name = "Make sure that your default recall button is 'B'", type = SPACE})
 	WeedleTwitch.Spells:MenuElement({id = "WS", name = "W Settings", type = MENU})
@@ -366,7 +366,7 @@
 		WeedleTwitch.Spells.WS:MenuElement({id = "Harass", name = "Enable W in Harass", value = false})
 		WeedleTwitch.Spells.WS:MenuElement({id = "Clear", name = "Enable W in Clear", value = false})
 		WeedleTwitch.Spells.WS:MenuElement({id = "CC", name = "Min amount of Minions to W in Clear", value = 3, min = 1, max = 7, step = 1})
-		WeedleTwitch.Spells.WS:MenuElement({id = "Flee", name = "Enable W in Flee", value = true})	
+		WeedleTwitch.Spells.WS:MenuElement({id = "Flee", name = "Enable W in Flee", value = false})	
 		WeedleTwitch.Spells.WS:MenuElement({id = "Mana", name = "Min mana% to W", value = 10, min = 0, max = 100, step = 1})
 	WeedleTwitch.Spells:MenuElement({id = "ES", name = "E Settings", type = MENU})
 		WeedleTwitch.Spells.ES:MenuElement({id = "E", name = "Enable Auto E", value = true})
