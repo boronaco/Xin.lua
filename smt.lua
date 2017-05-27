@@ -101,7 +101,7 @@ Função local DrawSmiteableMinion (tipo, minion)
 	fim
 	Se SmiteMenu.SmiteMarker [type]: Value () então
 		Se minion.pos2D.onScreen então
-			Draw.Circle (minion.pos, minion.boundingRadius, 6, Draw.Color (0));
+			Draw.Circle (minion.pos, minion.boundingRadius,Draw.Color (0));
 		fim
 	fim
 fim
