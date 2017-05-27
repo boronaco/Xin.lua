@@ -556,7 +556,22 @@ local HarassEMana = KoreanMechanics.Harass.MM.EMana:Value()
 	end
 end
 
-
+function Ahri:Clear()
+local ClearQ = KoreanMechanics.Clear.Q:Value()
+local ClearMana = KoreanMechanics.Clear.Mana:Value()
+local GetEnemyMinions = GetEnemyMinions()
+local Minions = nil	
+	if ClearQ and Ready(_Q) and (myHero.mana/myHero.maxMana >= 100) then
+		for i = 1, #GetEnemyMinions do
+		local Minions = GetEnemyMinions[i]
+		local Count = MinionsAround(Minions.pos, Spells["Ahri"]["AhriOrbofDeception"].range , Minions.team)
+			if Count >= KoreanMechanics.Clear.QC:Value() and Minions.distance <= Spells["Ahri"]["AhriOrbofDeception"].range then
+			local Rpos = Minions:GetPrediction(Spells["Ahri"]["AhriOrbofDeception"].speed, Spells["Ahri"]["AhriOrbofDeception"].delay)
+				KoreanCast(HK_Q, Rpos, KoreanMechanics.AS.QAS:Value())
+			end
+		end
+	end
+end
 
 function Ahri:Draw()
     if not myHero.dead then
