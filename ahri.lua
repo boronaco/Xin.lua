@@ -1909,4 +1909,4 @@ function Darius:Draw()
 end	
 
 
-if _G[myHero.charName]() then print("") end
+if _G[myHero.charName]() then print(".") end
