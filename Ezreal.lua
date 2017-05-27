@@ -1,7 +1,7 @@
 
 if myHero.charName ~= "Ezreal" then return end
 
-print("Welcome to Jackie's Ezreal")
+print(".")
 
 
 
@@ -214,11 +214,4 @@ Callback.Add("Tick", function()
 
 end)
 
-Callback.Add("Draw", function()
-	if myHero.dead then return end
-	--print(pred)
-	Draw.Circle(pred,30,20,Draw.Color(189, 183, 107, 255))
-
-
-end)
 
