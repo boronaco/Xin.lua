@@ -1,6 +1,6 @@
 Google Tradutor
 Texto original
-if mapID ~= SUMMONERS_RIFT then
+local mapID = Game.mapID;
 Sugerir uma tradução melhor
 Local mapID = Game.mapID;
 If mapID ~ = SUMMONERS_RIFT então
@@ -101,7 +101,7 @@ Função local DrawSmiteableMinion (tipo, minion)
 	fim
 	Se SmiteMenu.SmiteMarker [type]: Value () então
 		Se minion.pos2D.onScreen então
-			Draw.Circle (minion.pos, minion.boundingRadius, Draw.Color ());
+			Draw.Circle (minion.pos, minion.boundingRadius, 1, Draw.Color (0xFF00FF00));
 		fim
 	fim
 fim
