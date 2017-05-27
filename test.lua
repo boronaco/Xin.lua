@@ -404,7 +404,7 @@ class "Ahri"
 function Ahri:__init()
     print("")
     self:Menu()
-    Callback.Add("Draw", function() self:Draw() end)
+    
     Callback.Add("Tick", function() self:Tick() end)
     local _AhriE = Spells["Ahri"]["AhriSeduce"]
 	_AhriE.spellColl = Collision:SetSpell(_AhriE.range, _AhriE.speed, _AhriE.delay, _AhriE.width, true)
