@@ -651,7 +651,7 @@ function OnTick()
 	if LeeSinMenu.InSec.PosKey:Value() then
 		kickToPos=mousePos
 	end
-	if LeeSinMenu.WardJump.Key:Value(+) then
+	if LeeSinMenu.WardJump.Key:Value() then
 		WardJump(mousePos)
 	end
 	--if LeeSinMenu.InSec.SimpleKickS:Value() then
