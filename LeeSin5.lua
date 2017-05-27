@@ -666,8 +666,8 @@ function OnTick()
 end
 local screenX,screenY=Game.Resolution().x,Game.Resolution().y
 function OnDraw()
-	Draw.Circle(kickToPos,200,Draw.Color(255,255, 153, 0))
-	Draw.Circle(kickToPos,100)--
+	Draw.Circle(kickToPos,0,Draw.Color(255,255, 153, 0))
+	Draw.Circle(kickToPos,0)--
 	if not myHero.dead and not myHero.isImmortal then
 		if LeeSinMenu.Drawings.W:Value() then
 			for i=1,Game.WardCount() do
