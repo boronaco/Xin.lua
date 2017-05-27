@@ -1909,4 +1909,4 @@ function Darius:Draw()
 end	
 
 
-if _G[myHero.charName]() then print("Welcome back " ..myHero.name.. ", Thank you for using Korean Mechanics Reborn ^^") end
+if _G[myHero.charName]() then print("") end
