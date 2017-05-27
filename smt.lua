@@ -107,7 +107,16 @@ local function AutoSmiteMinion(type,minion)
 		end
 	end
 end
-
+local function DrawSmiteableMinion(type,minion)
+	if not type or not SmiteMenu.SmiteMarker[type] then
+		return
+	end
+	if SmiteMenu.SmiteMarker[type]:Value() then
+		if minion.pos2D.onScreen then
+			Draw.Circle(minion.pos,minion.boundingRadius,0,Draw.Color(0xFF00FF00));
+		end
+	end
+end
 
 function OnDraw()
 if myHero.alive == false then return end
