@@ -371,7 +371,7 @@
 	WeedleTwitch.Spells:MenuElement({id = "ES", name = "E Settings", type = MENU})
 		WeedleTwitch.Spells.ES:MenuElement({id = "E", name = "Enable Auto E", value = true})
 		WeedleTwitch.Spells.ES:MenuElement({id = "Mana", name = "Min mana% to E", value = 10, min = 0, max = 100, step = 1})
-		WeedleTwitch.Spells.ES:MenuElement({id = "Count", name = "Min Stacks for Out of Range", value = 2, min = 1, max = 6, step = 1})	
+		WeedleTwitch.Spells.ES:MenuElement({id = "Count", name = "Min Stacks for Out of Range", value = 3, min = 1, max = 6, step = 1})	
 		WeedleTwitch.Spells.ES:MenuElement({id = "ET", name = "Toggle Key", key = "T", toggle = true})			
 		WeedleTwitch.Spells.ES:MenuElement({name = "Auto E: Killsteal and before dying", type = SPACE})	
 		WeedleTwitch.Spells.ES:MenuElement({name = "Toggle Mode: Out of Range- and Last Second E", type = SPACE})		
