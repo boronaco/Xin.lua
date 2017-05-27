@@ -378,7 +378,7 @@
 	WeedleTwitch.Spells:MenuElement({id = "RS", name = "R Settings", type = MENU})
 		WeedleTwitch.Spells.RS:MenuElement({id = "Combo", name = "Enable R in Combo", value = false})
 		WeedleTwitch.Spells.RS:MenuElement({id = "Count", name = "Min amount of Enemies to R", value = 3, min = 1, max = 5, step = 1})
-		WeedleTwitch.Spells.RS:MenuElement({id = "Mana", name = "Min mana% to R", value = 10, min = 0, max = 100, step = 1})
+		WeedleTwitch.Spells.RS:MenuElement({id = "Mana", name = "Min mana% to R", value = 10, min = 100, max = 100, step = 1})
 
 	WeedleTwitch.Items:MenuElement({id = "BC", name = "Bilgewater Cutlass", type = MENU, })
 		WeedleTwitch.Items.BC:MenuElement({id = "Combo", name = "Enable in Combo", value = true})
