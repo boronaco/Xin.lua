@@ -31,13 +31,13 @@ LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "E", name = "Use E", valu
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "P", name = "Use Passive", value = true, leftIcon = P.icon})
 --InSec
 LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS", leftIcon = "http://guides.gamepressure.com/lol/gfx/word/1057761971.png"})
---LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("Y")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("X")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("C")})
-LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("K")})
+--LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("-")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("*")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("/")})
+LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("0")})
 --WardJump
 LeeSinMenu:MenuElement({type = MENU, id = "WardJump", name = "WardJump", leftIcon = W.icon})
-LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("S")})
+LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("+")})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AW", name = "Ward Jump AnyWay", value = false, leftIcon = W.icon})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AMR", name = "Ward Jump Only At Max Range", value = false, leftIcon = W.icon})
 --SmiteQ
@@ -49,10 +49,10 @@ LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "E", name = "Use E", value
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "R", name = "Use R", value = true, leftIcon = R.icon})
 --Drawings
 LeeSinMenu:MenuElement({type = MENU, id = "Drawings", name = "Drawings", leftIcon = "http://photoservice.gamesao.vn/Resources/Upload/Images/Editor/33/Li%C3%AAn%20Minh%20Huy%E1%BB%81n%20Tho%E1%BA%A1i/C%E1%BA%ADp%20nh%E1%BA%ADt%20tin%20t%E1%BB%A9c%20ng%C3%A0y%2017%20th%C3%A1ng%206%20n%C4%83m%202015/15.1.png"})
-LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "KP", name = "Draw Kick Path", value = true, leftIcon = R.icon})
-LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "ISJP", name = "Draw InSec Jump Pos", value = true, leftIcon = W.icon})
-LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "WJR", name = "Draw Ward Jump Range", value = true, leftIcon = W.icon})
-LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "W", name = "Draw Wards", value = true, leftIcon = wardIcon})
+LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "KP", name = "Draw Kick Path", value = false, leftIcon = R.icon})
+LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "ISJP", name = "Draw InSec Jump Pos", value = false, leftIcon = W.icon})
+LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "WJR", name = "Draw Ward Jump Range", value = false, leftIcon = W.icon})
+LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "W", name = "Draw Wards", value = false, leftIcon = wardIcon})
 --
 ---
 local lastQ1=os.clock()
