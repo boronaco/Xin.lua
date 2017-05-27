@@ -67,8 +67,6 @@ function XinZhao:LoadMenu()
   	self.Menu.Ripper.Misc:MenuElement({id = "Key", name = "Auto R Key", key = string.byte(" ")})
 	-- Drawings --------------------------------------------------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Drawings", name = "Drawings"})
-  	self.Menu.Ripper.Drawings:MenuElement({id = "E", name = "Draw E range", value = true})
-  	self.Menu.Ripper.Drawings:MenuElement({id = "R", name = "Draw R range", value = true})
   	self.Menu.Ripper.Drawings:MenuElement({id = "Width", name = "Width", value = 3, min = 1, max = 5, step = 1})
 	self.Menu.Ripper.Drawings:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 0, 0, 255)})
 end
