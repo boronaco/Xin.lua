@@ -71,37 +71,37 @@ function Annie:LoadMenu()
 	--------- Menu LaneClear ------------------------------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "LaneClear", name = "Lane Clear"})
   	self.Menu.Ripper.LaneClear:MenuElement({id = "Q", name = "Use Q", value = true, leftIcon = Icons.Q})
-	self.Menu.Ripper.LaneClear:MenuElement({id = "W", name = "Use W", value = false, leftIcon = Icons.W})
+	self.Menu.Ripper.LaneClear:MenuElement({id = "W", name = "Use W", value = true, leftIcon = Icons.W})
     self.Menu.Ripper.LaneClear:MenuElement({id = "HW", name = "Min minions hit by W", value = 4, min = 1, max = 7})
 	self.Menu.Ripper.LaneClear:MenuElement({id = "SS", name = "Save Stun", value = true})
     self.Menu.Ripper.LaneClear:MenuElement({id = "Mana", name = "Min mana to Clear (%)", value = 40, min = 0, max = 100})
 	--------- Menu JungleClear ------------------------------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "JungleClear", name = "Jungle Clear"})
   	self.Menu.Ripper.JungleClear:MenuElement({id = "Q", name = "Use Q", value = true, leftIcon = Icons.Q})
-	self.Menu.Ripper.JungleClear:MenuElement({id = "W", name = "Use W", value = false, leftIcon = Icons.W})
+	self.Menu.Ripper.JungleClear:MenuElement({id = "W", name = "Use W", value = true, leftIcon = Icons.W})
 	self.Menu.Ripper.JungleClear:MenuElement({id = "SS", name = "Save Stun", value = true})
     self.Menu.Ripper.JungleClear:MenuElement({id = "Mana", name = "Min mana to Clear (%)", value = 40, min = 0, max = 100})
 	--------- Menu Harass ---------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Harass", name = "Harass"})
-  	self.Menu.Ripper.Harass:MenuElement({id = "Q", name = "Use Q", value = false, leftIcon = Icons.Q})
-  	self.Menu.Ripper.Harass:MenuElement({id = "W", name = "Use W", value = false, leftIcon = Icons.W})
+  	self.Menu.Ripper.Harass:MenuElement({id = "Q", name = "Use Q", value = true, leftIcon = Icons.Q})
+  	self.Menu.Ripper.Harass:MenuElement({id = "W", name = "Use W", value = true, leftIcon = Icons.W})
 	self.Menu.Ripper.Harass:MenuElement({id = "SS", name = "Save Stun", value = false})
     self.Menu.Ripper.Harass:MenuElement({id = "Mana", name = "Min mana to Harass (%)", value = 40, min = 0, max = 100})
 	--------- Menu Flee ----------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Flee", name = "Flee"})
-  	self.Menu.Ripper.Flee:MenuElement({id ="Q", name = "Use Q if have stun", value = false, leftIcon = Icons.Q})
-	self.Menu.Ripper.Flee:MenuElement({id ="W", name = "Use W to stack stun", value = false, leftIcon = Icons.W})
-  	self.Menu.Ripper.Flee:MenuElement({id ="E", name = "Use E to stack stun", value = false, leftIcon = Icons.E})
+  	self.Menu.Ripper.Flee:MenuElement({id ="Q", name = "Use Q if have stun", value = true, leftIcon = Icons.Q})
+	self.Menu.Ripper.Flee:MenuElement({id ="W", name = "Use W to stack stun", value = true, leftIcon = Icons.W})
+  	self.Menu.Ripper.Flee:MenuElement({id ="E", name = "Use E to stack stun", value = true, leftIcon = Icons.E})
 	--------- Menu KS -----------------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "KS", name = "Killsteal"})
   	self.Menu.Ripper.KS:MenuElement({id = "Q", name = "Use Q", value = true, leftIcon = Icons.Q})
   	self.Menu.Ripper.KS:MenuElement({id = "W", name = "Use W", value = true, leftIcon = Icons.W})
-	self.Menu.Ripper.KS:MenuElement({id = "R", name = "Use R", value = false, leftIcon = Icons.R})	
+	self.Menu.Ripper.KS:MenuElement({id = "R", name = "Use R", value = true, leftIcon = Icons.R})	
 	--------- Menu Misc -----------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Misc", name = "Misc"})
     self.Menu.Ripper.Misc:MenuElement({id = "AI", name = "Auto Q interrupter", value = true})
 	self.Menu.Ripper.Misc:MenuElement({id = "ES", name = "Auto E passive stack", value = true})
-    self.Menu.Ripper.Misc:MenuElement({id = "Mana", name = "Min mana to auto E (%)", value = 80, min = 0, max = 100})
+    self.Menu.Ripper.Misc:MenuElement({id = "Mana", name = "Min mana to auto E (%)", value = 40, min = 0, max = 100})
 	--------- Menu Drawings --------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Drawings", name = "Drawings"})
   	self.Menu.Ripper.Drawings:MenuElement({id = "Q", name = "Draw Q range", value = false, leftIcon = Icons.Q})
@@ -481,6 +481,6 @@ function Annie:Draw()
 end
     
 function OnLoad()
-    if myHero.charName ~= "." then return end
+    if myHero.charName ~= "Annie" then return end
 	Annie()
 end
