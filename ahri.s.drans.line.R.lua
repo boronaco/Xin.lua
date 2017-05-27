@@ -460,7 +460,6 @@ end
 
 function Ahri:Combo()
     if target == nil then return end	
-    end
     if KoreanMechanics.Combo.E:Value() and Ready(_E) and (myHero.mana/myHero.maxMana >= KoreanMechanics.Combo.MM.EMana:Value() / 100) then
         if KoreanCanCast(_E) then 
             KoreanCast(HK_E, KoreanPred(target, _E), KoreanMechanics.AS.EAS:Value())
@@ -510,7 +509,7 @@ function Ahri:Combo()
         	end
     	end 
     end
-
+end
 
 function Ahri:Harass()
     if target == nil then return end	
