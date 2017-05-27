@@ -64,27 +64,7 @@ local target=nil
 local ItemSlots={ITEM_1,ITEM_2,ITEM_3,ITEM_4,ITEM_5,ITEM_6,ITEM_7}
 local ItemHotKeys={HK_ITEM_1,HK_ITEM_2,HK_ITEM_3,HK_ITEM_4,HK_ITEM_5,HK_ITEM_6,HK_ITEM_7}
 local WardingItems={2055,2302,2301,2303,2049,2045,3711,1408,1409,1410,1418}
---------------------------------------------------------------------------------
---[[Rectangel]]--from fubman
---------------------------------------------------------------------------------
-local function DrawLine3D(x,y,z,a,b,c,width,col)
-  local p1 = Vector(x,y,z):To2D()
-  local p2 = Vector(a,b,c):To2D()
-  Draw.Line(p1.x, p1.y, p2.x, p2.y, width, col)
-end
 
-local function DrawRectangleOutline(a, b, width, col)--
-  local startPos = a
-  local endPos = b
-  local c1 = startPos+Vector(Vector(endPos)-startPos):Perpendicular():Normalized()*width
-  local c2 = startPos+Vector(Vector(endPos)-startPos):Perpendicular2():Normalized()*width
-  local c3 = endPos+Vector(Vector(startPos)-endPos):Perpendicular():Normalized()*width
-  local c4 = endPos+Vector(Vector(startPos)-endPos):Perpendicular2():Normalized()*width
-  DrawLine3D(c1.x,c1.y,c1.z,c2.x,c2.y,c2.z,2,col)
-  DrawLine3D(c2.x,c2.y,c2.z,c3.x,c3.y,c3.z,2,col)
-  DrawLine3D(c3.x,c3.y,c3.z,c4.x,c4.y,c4.z,2,col)
-  DrawLine3D(c1.x,c1.y,c1.z,c4.x,c4.y,c4.z,2,col)
-end
 ---
 ---
 ---
