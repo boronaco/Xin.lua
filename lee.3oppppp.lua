@@ -1330,7 +1330,7 @@ print(".")
 end
 local screenX,screenY=Game.Resolution().x,Game.Resolution().y
 function OnDraw()
-	Draw.Circle(kickToPos,200,Draw.Color())
+	Draw.Circle(kickToPos,200,Draw.Color(1))
 	Draw.Circle(kickToPos,100)--
 	if not myHero.dead and not myHero.isImmortal then
 		if LeeSinMenu.Drawings.W:Value() then
