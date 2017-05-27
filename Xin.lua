@@ -4,7 +4,7 @@ function XinZhao:__init()
 	self:LoadSpells()
   	self:LoadMenu() 
   	Callback.Add("Tick", function() self:Tick() end)
-  	
+  	Callback.Add("Draw", function() self:Draw() end) 
 end
 
 function XinZhao:LoadSpells() 
@@ -65,6 +65,12 @@ function XinZhao:LoadMenu()
   	self.Menu.Ripper.Misc:MenuElement({id = "AutoR", name = "Auto R", value = false, leftIcon = Icons.R})
 	self.Menu.Ripper.Misc:MenuElement({id = "EAutoR", name = "Enemies to auto R", value = 4, min = 1, max = 5})
   	self.Menu.Ripper.Misc:MenuElement({id = "Key", name = "Auto R Key", key = string.byte(" ")})
+	-- Drawings --------------------------------------------------------------------------------------------------------------------
+  	self.Menu.Ripper:MenuElement({type = MENU, id = "Drawings", name = "Drawings"})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "E", name = "Draw E range", value = true})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "R", name = "Draw R range", value = true})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "Width", name = "Width", value = 3, min = 1, max = 5, step = 1})
+	self.Menu.Ripper.Drawings:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 0, 0, 255)})
 end
 
 function XinZhao:Tick()
@@ -294,6 +300,14 @@ function XinZhao:KS()
 	end
 end
 
+function XinZhao:Draw()
+	if myHero.dead then return end
+	if self.Menu.Ripper.Drawings.E:Value() then Draw.Circle(myHero.pos, 650, self.Menu.Ripper.Drawings.Width:Value(), self.Menu.Ripper.Drawings.Color:Value())
+	end
+	if self.Menu.Ripper.Drawings.R:Value() then Draw.Circle(myHero.pos, R.range, self.Menu.Ripper.Drawings.Width:Value(), self.Menu.Ripper.Drawings.Color:Value())	
+	end	
+end
+  
 function OnLoad()
     	if myHero.charName ~= "XinZhao" then return end
 	XinZhao()
