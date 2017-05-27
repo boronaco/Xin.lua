@@ -1,6 +1,6 @@
 Google Tradutor
 Texto original
-SmiteMenu:MenuElement({id = "Enabled", name = "Enabled", value = true})
+if mapID ~= SUMMONERS_RIFT then
 Sugerir uma tradução melhor
 Local mapID = Game.mapID;
 If mapID ~ = SUMMONERS_RIFT então
@@ -101,7 +101,7 @@ Função local DrawSmiteableMinion (tipo, minion)
 	fim
 	Se SmiteMenu.SmiteMarker [type]: Value () então
 		Se minion.pos2D.onScreen então
-			Draw.Circle (minion.pos, minion.boundingRadius,Draw.Color (0));
+			Draw.Circle (minion.pos, minion.boundingRadius, Draw.Color ());
 		fim
 	fim
 fim
