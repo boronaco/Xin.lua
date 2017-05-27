@@ -643,7 +643,42 @@ function OnTick()
 	if LeeSinMenu.InSec.InSecS:Value() then
 		InSec(kickToPos)
 	end
-
-		
+end
+local screenX,screenY=Game.Resolution().x,Game.Resolution().y
+function OnDraw()
+	Draw.Circle(kickToPos,200,Draw.Color(0,0, 0, 0))
+	Draw.Circle(kickToPos,100)--
+	if not myHero.dead and not myHero.isImmortal then
+		if LeeSinMenu.Drawings.W:Value() then
+			for i=1,Game.WardCount() do
+				local ward=Game.Ward(i)
+				if not ward.dead and ward.distance<=1300 then
+					Draw.Circle(ward.pos,100)
+				end
+			end
+		end
+		if LeeSinMenu.Drawings.WJR:Value() and Game.CanUseSpell(_W)==READY and GetSpellVersion(_W)==1 then
+			Draw.Circle(myHero.pos,640)--wardjump range
+		end
+		if LeeSinMenu.Drawings.KP:Value() and Game.CanUseSpell(_R)==READY and target then
+			--for i=1,Game.HeroCount() do
+				local hero=target
+				if hero.isEnemy and not hero.dead and not hero.isImmortal then
+					DrawRectangleOutline(GetKickEndPos(hero),Vector(hero.pos),100)
+					Draw.Circle(GetKickEndPos(hero),100)
+				end
+			--end
+		end
+		if LeeSinMenu.Drawings.ISJP:Value() and Game.CanUseSpell(_W)==READY and GetSpellVersion(_W)==1 and target then
+			--for i=1,Game.HeroCount() do
+				local hero=target
+				if hero.isEnemy and not hero.dead and not hero.isImmortal then
+					local pos=Normalized2(Vector(hero.pos),kickToPos:DistanceTo(Vector(hero.pos))+350,kickToPos)
+					DrawRectangleOutline(pos,Vector(hero.pos),100)
+				end
+			--end
+		end
+	end
+end
 --
 print(".")
