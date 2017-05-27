@@ -104,9 +104,9 @@ function Annie:LoadMenu()
     self.Menu.Ripper.Misc:MenuElement({id = "Mana", name = "Min mana to auto E (%)", value = 40, min = 0, max = 100})
 	--------- Menu Drawings --------------------------------------------------------------------
   	self.Menu.Ripper:MenuElement({type = MENU, id = "Drawings", name = "Drawings"})
-  	self.Menu.Ripper.Drawings:MenuElement({id = "Q", name = "Draw Q range", value = false, leftIcon = Icons.Q})
-  	self.Menu.Ripper.Drawings:MenuElement({id = "W", name = "Draw W range", value = false, leftIcon = Icons.W})
-  	self.Menu.Ripper.Drawings:MenuElement({id = "R", name = "Draw R range", value = false, leftIcon = Icons.R})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "Q", name = "Draw Q range", value = true, leftIcon = Icons.Q})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "W", name = "Draw W range", value = true, leftIcon = Icons.W})
+  	self.Menu.Ripper.Drawings:MenuElement({id = "R", name = "Draw R range", value = true, leftIcon = Icons.R})
   	self.Menu.Ripper.Drawings:MenuElement({id = "Width", name = "Width", value = 2, min = 1, max = 5, step = 1})
 	self.Menu.Ripper.Drawings:MenuElement({id = "Color", name = "Color", color = Draw.Color(255, 0, 0, 255)})
 end
