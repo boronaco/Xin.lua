@@ -14,9 +14,9 @@ local smiteIcon="http://choualbox.com/Img/141692498458.png"
 local wardIcon="https://s-media-cache-ak0.pinimg.com/236x/bf/3f/88/bf3f88c18d6385422c5bb23a595327d0.jpg"
 local challengerIcon="http://4.bp.blogspot.com/-CsEIhRh74bE/VfRlhyvNjXI/AAAAAAAABPQ/FFLyO8VNguE/s1600/challenger.png"
 -- Menu
-local LeeSinMenu = MenuElement({type = MENU, id = "LeeSinMenu", name = "LeeSin", leftIcon = "l"})
+local LeeSinMenu = MenuElement({type = MENU, id = "LeeSinMenu", name = "LeeSin"})
 --Combo
-LeeSinMenu:MenuElement({type = MENU, id = "Combo", name = "Combo Menu", leftIcon = "1"})
+LeeSinMenu:MenuElement({type = MENU, id = "Combo", name = "Combo Menu"})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "W", name = "Use W", value = true, leftIcon = W.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
@@ -24,31 +24,31 @@ LeeSinMenu.Combo:MenuElement({type = PARAM, id = "P", name = "Use Passive", valu
 --LeeSinMenu.Combo:MenuElement({type = PARAM, id = "PS", name = "Passive Stacks To Use", value = 2,min=1,may=2, leftIcon = P.icon})
 LeeSinMenu.Combo:MenuElement({type = PARAM, id = "WJ", name = " WardJump As Gapclose", value = true, leftIcon = wardIcon})
 --JungleClear
-LeeSinMenu:MenuElement({type = MENU, id = "JungleClear", name = "JungleClear Menu", leftIcon = "1"})
+LeeSinMenu:MenuElement({type = MENU, id = "JungleClear", name = "JungleClear Menu"})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "W", name = "Use W", value = true, leftIcon = W.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
 LeeSinMenu.JungleClear:MenuElement({type = PARAM, id = "P", name = "Use Passive", value = true, leftIcon = P.icon})
 --InSec
-LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS", leftIcon = "1"})
+LeeSinMenu:MenuElement({type = MENU, id = "InSec", name = "InSecS"})
 --LeeSinMenu.InSec:MenuElement({type = PARAM, id = "SimpleKickS", name = "SimpleKick Key", key=string.byte("Y")})
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "FlashKickS", name = "FlashKick Key", key=string.byte("X")})
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "InSecS", name = "Typical-InSec Key", key=string.byte("C")})
 LeeSinMenu.InSec:MenuElement({type = PARAM, id = "PosKey", name = "KickToPos Changer Key", key=string.byte("K")})
 --WardJump
-LeeSinMenu:MenuElement({type = MENU, id = "WardJump", name = "WardJump", leftIcon = W.icon})
+LeeSinMenu:MenuElement({type = MENU, id = "WardJump", name = "WardJump"})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "Key", name = "Ward Jump Key", key=string.byte("s")})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AW", name = "Ward Jump AnyWay", value = false, leftIcon = W.icon})
 LeeSinMenu.WardJump:MenuElement({type = PARAM, id = "AMR", name = "Ward Jump Only At Max Range", value = false, leftIcon = W.icon})
 --SmiteQ
-LeeSinMenu:MenuElement({type = PARAM, id = "SmiteQ", name = "Smite-Q", value = true, leftIcon = smiteIcon})
+LeeSinMenu:MenuElement({type = PARAM, id = "SmiteQ", name = "Smite-Q", value = true})
 --KillSecure
-LeeSinMenu:MenuElement({type = MENU, id = "KillSecure", name = " KillSecure Menu", leftIcon = "1"})
+LeeSinMenu:MenuElement({type = MENU, id = "KillSecure", name = " KillSecure Menu"})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "Q", name = "Use Q", value = true, leftIcon = Q.icon})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "E", name = "Use E", value = true, leftIcon = E.icon})
 LeeSinMenu.KillSecure:MenuElement({type = PARAM, id = "R", name = "Use R", value = true, leftIcon = R.icon})
 --Drawings
-LeeSinMenu:MenuElement({type = MENU, id = "Drawings", name = "Drawings", leftIcon = "1"})
+LeeSinMenu:MenuElement({type = MENU, id = "Drawings", name = "Drawings"})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "KP", name = "Draw Kick Path", value = false, leftIcon = R.icon})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "ISJP", name = "Draw InSec Jump Pos", value = false, leftIcon = W.icon})
 LeeSinMenu.Drawings:MenuElement({type = PARAM, id = "WJR", name = "Draw Ward Jump Range", value = false, leftIcon = W.icon})
