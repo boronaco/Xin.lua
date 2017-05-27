@@ -363,7 +363,7 @@
 		WeedleTwitch.Spells.QS:MenuElement({name = "Make sure that your default recall button is 'B'", type = SPACE})
 	WeedleTwitch.Spells:MenuElement({id = "WS", name = "W Settings", type = MENU})
 		WeedleTwitch.Spells.WS:MenuElement({id = "Combo", name = "Enable W in Combo", value = true})
-		WeedleTwitch.Spells.WS:MenuElement({id = "Harass", name = "Enable W in Harass", value = true})
+		WeedleTwitch.Spells.WS:MenuElement({id = "Harass", name = "Enable W in Harass", value = false})
 		WeedleTwitch.Spells.WS:MenuElement({id = "Clear", name = "Enable W in Clear", value = true})
 		WeedleTwitch.Spells.WS:MenuElement({id = "CC", name = "Min amount of Minions to W in Clear", value = 3, min = 1, max = 7, step = 1})
 		WeedleTwitch.Spells.WS:MenuElement({id = "Flee", name = "Enable W in Flee", value = true})	
