@@ -217,26 +217,7 @@ function XinZhao:JungleClear()
     	end
 end
 
-function XinZhao:LaneClear()
-  	if self:GetValidMinion(E.range) == false then return end
-  	for i = 1, Game.MinionCount() do
-	local minion = Game.Minion(i)
-    	if  minion.team == 200 then
-      	if self:IsValidTarget(minion,125) and myHero.mana/myHero.maxMana >= (self.Menu.Ripper.LaneClear.Mana:Value() / 100 ) and myHero.pos:DistanceTo(minion.pos) < 125 and self.Menu.Ripper.LaneClear.Q:Value() and self:Ready(_Q) then
-	Control.CastSpell(HK_Q)
-	break
-	end
-	if self:IsValidTarget(minion,125) and myHero.mana/myHero.maxMana >= (self.Menu.Ripper.LaneClear.Mana:Value() / 100 ) and myHero.pos:DistanceTo(minion.pos) < 125 and self.Menu.Ripper.LaneClear.W:Value() and self:Ready(_W) then
-	Control.CastSpell(HK_W)
-	break
-	end
-	if self:IsValidTarget(minion,650) and myHero.mana/myHero.maxMana >= (self.Menu.Ripper.LaneClear.Mana:Value() / 100 ) and myHero.pos:DistanceTo(minion.pos) < 650 and self.Menu.Ripper.LaneClear.E:Value() and self:Ready(_E) then
-	Control.CastSpell(HK_E,minion.pos)
-	break
-	end
-      	end
-    	end
-end
+
 
 function XinZhao:Flee()
   	if self.Menu.Ripper.Flee.R:Value() and self:Ready(_R)
