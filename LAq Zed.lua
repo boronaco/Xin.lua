@@ -379,6 +379,8 @@ function LAqZed:Harass(target)
             if target.distance < E.Range and self:CanCast(_E) and harassE then
                 self:CastE()
             end
+            
+            
         end
     end
 end
@@ -473,21 +475,6 @@ function LAqZed:Draw()
         if self.Menu.Draw.DrawR:Value() then
             Draw.Circle(myHero.pos, R.Range, 1, Draw.Color(255, 255, 255, 255))
         end
-    end
-
-    local textPos = myHero.pos:To2D()
-
-    if self.Menu.Combo.ComboMode:Value() == 1 then
-        Draw.Text("Combo Mode: Normal", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 0, 0))
-    end
-    if self.Menu.Combo.ComboMode:Value() == 2 then
-        Draw.Text("Combo Mode: Line", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 0, 0))
-    end
-    if self.Menu.Combo.ComboMode:Value() == 3 then
-        Draw.Text("Combo Mode: Illuminati", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 0, 0))
-    end
-    if self.Menu.Combo.ComboMode:Value() == 4 then
-        Draw.Text("Combo Mode: The Angel", 20, textPos.x - 80, textPos.y + 60, Draw.Color(255, 255, 0, 0))
     end
 
     if self.Menu.Draw.DrawLongHarass:Value() then
