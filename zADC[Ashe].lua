@@ -333,7 +333,7 @@ end
 if myHero.charName == "Lucian" then
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Lucian","v1.3","TRUS","7.10"
 	
-	class "Lucian"
+	
 	
 	local passive = true
 	local lastbuff = 0
