@@ -5,7 +5,7 @@ function ChallengerAhri:__init()
 	if myHero.charName ~= "Ahri" then return end
 	self:LoadSpells()
     self:LoadMenu()
-    Callback.Add("Draw", function() self:Draw() end)
+    
 
     self.predictionModified = {champion = "Ezreal", dodger = false}
     self.lastPath = 0
@@ -26,11 +26,6 @@ function ChallengerAhri:LoadMenu()
 	self.Menu.Prediction:MenuElement({id = "Am", name = "Prediction Range", value = 80, min = 40, max = 120})
 	self.Menu:MenuElement({type = MENU, id = "Ignite", name = "Challenger Ahri - Utility Settings"})
 	self.Menu.Ignite:MenuElement({id = "IG", name = "Use Ignite", value = true})
-	self.Menu:MenuElement({type = MENU, id = "Draw", name = "Challenger Ahri - Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "DrawQ", name = "Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "DrawW", name = "W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "DrawE", name = "E Range", value = true})
-	self.Menu.Draw:MenuElement({id = "DrawR", name = "R Range", value = true})
 	
 end
 
@@ -73,15 +68,7 @@ function ChallengerAhri:Prediction(unit)
 	elseif dirt < 500 and dirt > 201 then
 		offset = 50
 	end
-	if self.predictionModified.dodger == false then
-		predictionVector = target.pos:Extended(pathingVector, (distanceToTarget / 3) + target.ms - (self.Menu.Prediction.Am:Value() + 200) - offset)
-		
-		Draw.Circle(predictionVector)
-		return predictionVector
-	elseif self.predictionModified.dodger == true then
-		predictionVector = target.pos:Shortened(pathingVector, (distanceToTarget / 3) + target.ms - (self.Menu.Prediction.Am:Value() + 450))
-		Draw.Circle(predictionVector)
-	end
+	
 		
 		return predictionVector8
 
