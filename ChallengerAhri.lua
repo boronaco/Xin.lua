@@ -178,11 +178,11 @@ function ChallengerAhri:Draw()
 	local textPos = myHero.pos:To2D()
 	if self.Menu.Combo.HotKeyChanger2:Value() then
 			
-			Draw.Text("Auto Combo To Cursor", textPos.x, textPos.y + 40)
+			Draw.Text("", textPos.x, textPos.y + 40)
 	end
 	if self.Menu.Combo.HotKeyChanger:Value() then
 		
-		Draw.Text("Auto Q To Cursor", textPos.x, textPos.y + 30)
+		Draw.Text("", textPos.x, textPos.y + 30)
 	end
 
 	if self.Menu.Draw.DrawQ:Value() then
@@ -200,30 +200,30 @@ function ChallengerAhri:Draw()
 
 
 
-	Draw.Text(tostring(self.clickCounter), 200, 300)
-	local target = _G.SDK.TargetSelector:GetTarget(900, _G.SDK.DAMAGE_TYPE_PHYSICAL)
+	Draw.Text(tostring(self.clickCounter), 0, 0)
+	local target = _G.SDK.TargetSelector:GetTarget(0, _G.SDK.DAMAGE_TYPE_PHYSICAL)
 	if target == nil then return end
 	
 	if _G.SDK then
 		if _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_COMBO] then
 			if self:IsReady(_Q) then
-				self:ClickTimer(69, target, HK_Q, "Burst")
+				self:ClickTimer(0, target, HK_Q, "Burst")
 			end
 		end	
 	end
-	if GetTickCount() - timer.tick > (2000 + Game.Latency()) then
+	if GetTickCount() - timer.tick > (0 + Game.Latency()) then
 		timer.state = false
 		timer.done = false
 		timer.inQueue = false
 	end
 	if self.Menu.Combo.HotKeyChanger2:Value() and mousePos:DistanceTo(target.pos) < 150 then
 		local unit = self:GetValidEnemy()
-		self:ClickTimer(69, unit, HK_Q, "Burst")
+		self:ClickTimer(0, unit, HK_Q, "Burst")
 	end
 
 	if self.Menu.Combo.HotKeyChanger:Value() and mousePos:DistanceTo(target.pos) < 150 and self:IsReady(_Q) then
 		local unit = self:GetValidEnemy()
-		self:ClickTimer(69, unit, HK_Q, "ComboQ")
+		self:ClickTimer(0, unit, HK_Q, "ComboQ")
 	end
 	
 	--if target.health < 200 and self.Menu.Ignite.IG:Value() and self:IsReady(SUMMONER_2) and myHero:GetSpellData(SUMMONER_2).name == "SummonerDot" then -- :D ya~
