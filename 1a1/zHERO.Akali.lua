@@ -551,12 +551,12 @@ function OnDraw()
         local ColorGrey = Draw.Color(255, 153, 153, 153)
 
         if Config.Harass.Q.Auto.Enabled:Value() then
-            Draw.Text("Auto Harass [Q]: On", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+0)
+            Draw.Text("", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+0)
         else
-            --Draw.Text("Auto Harass [Q]: Off", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+0, ColorGrey)
+            --Draw.Text("", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+0, ColorGrey)
         end
         if Config.LastHit.Q.Auto.Enabled:Value() then
-            Draw.Text("Auto LastHit [Q]: On", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17)
+            Draw.Text("", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17)
         else
             --Draw.Text("", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17, ColorGrey)
         end
