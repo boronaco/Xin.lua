@@ -76,11 +76,11 @@ function ChallengerAhri:Prediction(unit)
 	if self.predictionModified.dodger == false then
 		predictionVector = target.pos:Extended(pathingVector, (distanceToTarget / 3) + target.ms - (self.Menu.Prediction.Am:Value() + 200) - offset)
 		
-		Draw.Circle(predictionVector)
+		Draw.Circle()
 		return predictionVector
 	elseif self.predictionModified.dodger == true then
 		predictionVector = target.pos:Shortened(pathingVector, (distanceToTarget / 3) + target.ms - (self.Menu.Prediction.Am:Value() + 450))
-		Draw.Circle(predictionVector)
+		Draw.Circle()
 	end
 		
 		return predictionVector8
