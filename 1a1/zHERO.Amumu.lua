@@ -4,7 +4,7 @@ require = 'DamageLib'
 
 function Amumu:__init()
 	if myHero.charName ~= "Amumu" then return end
-PrintChat("Amumu - Tocsin loaded")
+PrintChat("")
 self:LoadSpells()
 self:LoadMenu()
 Callback.Add("Tick", function() self:Tick() end)
