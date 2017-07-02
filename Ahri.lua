@@ -174,43 +174,10 @@ end
 function ChallengerAhri:IsReady (spell)
 	return Game.CanUseSpell(spell) == 0 
 end
-function ChallengerAhri:Draw()
-	local textPos = myHero.pos:To2D()
-	if self.Menu.Combo.HotKeyChanger2:Value() then
-			
-			Draw.Text("Auto Combo To Cursor", textPos.x, textPos.y + 40)
-	end
-	if self.Menu.Combo.HotKeyChanger:Value() then
-		
-		Draw.Text("Auto Q To Cursor", textPos.x, textPos.y + 30)
-	end
-
-	if self.Menu.Draw.DrawQ:Value() then
-		Draw.Circle(myHero.pos, Q.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawW:Value() then
-		Draw.Circle(myHero.pos, W.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawE:Value() then
-		Draw.Circle(myHero.pos, E.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
-	if self.Menu.Draw.DrawR:Value() then
-		Draw.Circle(myHero.pos, R.Range, 1, Draw.Color(255, 255, 255, 255))
-	end
 
 
 
-	Draw.Text(tostring(self.clickCounter), 200, 300)
-	local target = _G.SDK.TargetSelector:GetTarget(900, _G.SDK.DAMAGE_TYPE_PHYSICAL)
-	if target == nil then return end
 	
-	if _G.SDK then
-		if _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_COMBO] then
-			if self:IsReady(_Q) then
-				self:ClickTimer(69, target, HK_Q, "Burst")
-			end
-		end	
-	end
 	if GetTickCount() - timer.tick > (2000 + Game.Latency()) then
 		timer.state = false
 		timer.done = false
