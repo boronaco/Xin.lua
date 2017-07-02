@@ -183,10 +183,7 @@ end
 		timer.done = false
 		timer.inQueue = false
 	end
-	if self.Menu.Combo.HotKeyChanger2:Value() and mousePos:DistanceTo(target.pos) < 150 then
-		local unit = self:GetValidEnemy()
-		self:ClickTimer(69, unit, HK_Q, "Burst")
-	end
+	
 
 	if self.Menu.Combo.HotKeyChanger:Value() and mousePos:DistanceTo(target.pos) < 150 and self:IsReady(_Q) then
 		local unit = self:GetValidEnemy()
