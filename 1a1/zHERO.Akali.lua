@@ -558,7 +558,7 @@ function OnDraw()
         if Config.LastHit.Q.Auto.Enabled:Value() then
             Draw.Text("Auto LastHit [Q]: On", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17)
         else
-            --Draw.Text("Auto LastHit [Q]: Off", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17, ColorGrey)
+            --Draw.Text("", 16 ,myHero.pos2D.x-55, myHero.pos2D.y+17, ColorGrey)
         end
 		if Config.Draw.DrawQ:Value() then
 			Draw.Circle(myHero.pos, GetRange(_Q), 1, Draw.Color(255, 0, 255, 0))
