@@ -1,5 +1,5 @@
 local KoreanChamps = {"Ahri"}
-if not table.contains(KoreanChamps, myHero.charName)  then print("" ..myHero.charName.. " Is Not (Yet) Supported") return end
+if not table.contains(KoreanChamps, myHero.charName)  then print("" ..myHero.charName.. "") return end
 
 local KoreanMechanics = MenuElement({type = MENU, id = "KoreanMechanics", name = "Korean Mechanics Reborn | "})
 KoreanMechanics:MenuElement({type = MENU, id = "Combo", name = "Korean Combo Settings"})
