@@ -185,10 +185,7 @@ end
 	end
 	
 
-	if self.Menu.Combo.HotKeyChanger:Value() and mousePos:DistanceTo(target.pos) < 150 and self:IsReady(_Q) then
-		local unit = self:GetValidEnemy()
-		self:ClickTimer(69, unit, HK_Q, "ComboQ")
-	end
+
 	
 	--if target.health < 200 and self.Menu.Ignite.IG:Value() and self:IsReady(SUMMONER_2) and myHero:GetSpellData(SUMMONER_2).name == "SummonerDot" then -- :D ya~
 		--self:ClickTimer(69, target, HK_SUMMONER_2, "Burst", true)
