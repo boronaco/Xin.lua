@@ -200,7 +200,7 @@ end
 	--end
 
 	
-end
+
 function ChallengerAhri:GetValidEnemy()
     for i = 1,Game.HeroCount() do
         local enemy = Game.Hero(i)
