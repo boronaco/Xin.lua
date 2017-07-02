@@ -31,7 +31,7 @@ function Fiora:LoadMenu()
 
 --Main Menu
 
-	self.Menu = MenuElement({type = MENU, id = "Fiora", name = "Fiora", leftIcon = Icons["FioraIcon"]})
+	self.Menu = MenuElement({type = MENU, id = "Fiora", name = "Fiora"})
 
 --Combo Settings Menu
 
