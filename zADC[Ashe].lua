@@ -638,7 +638,7 @@ end
 
 if myHero.charName == "Caitlyn" then
 	if myHero.charName ~= "Caitlyn" then return end
-	class "Caitlyn"
+	
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Caitlyn","v1.4","TRUS","7.10"
 	require "DamageLib"
 	local qtarget
