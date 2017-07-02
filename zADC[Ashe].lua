@@ -884,7 +884,7 @@ end
 if myHero.charName == "Ezreal" then
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Ezreal","v1.5","TRUS","7.10"
 	
-	class "Ezreal"
+	
 	require "DamageLib"
 	function Ezreal:__init()
 		self:LoadSpells()
@@ -1065,7 +1065,7 @@ end
 
 if myHero.charName == "Twitch" then
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Twitch","v1.2","TRUS","7.10"
-	class "Twitch"
+	
 	require "DamageLib"
 	local qtarget
 	local barHeight = 8
@@ -1248,7 +1248,7 @@ end
 
 if myHero.charName == "KogMaw" then
 	local Scriptname,Version,Author,LVersion = "TRUSt in my KogMaw","v1.0","TRUS","7.10"
-	class "KogMaw"
+	
 	
 	function KogMaw:__init()
 		self:LoadSpells()
@@ -1491,7 +1491,7 @@ end
 
 if myHero.charName == "Kalista" then 
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Kalista","v1.8","TRUS","7.10"
-	class "Kalista"
+	
 	require "DamageLib"
 	
 	local barHeight = 8
@@ -1971,7 +1971,7 @@ end
 
 if myHero.charName == "Sivir" then 
 	local Scriptname,Version,Author,LVersion = "TRUSt in my Sivir","v1.0","TRUS","7.10"
-	class "Sivir"
+	
 	
 	function Sivir:__init()
 		self:LoadMenu()
