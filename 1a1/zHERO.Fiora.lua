@@ -4,7 +4,7 @@ require = 'DamageLib'
 
 function Fiora:__init()
 	if myHero.charName ~= "Fiora" then return end
-PrintChat("Fiora - Tocsin loaded")
+PrintChat("")
 self:LoadSpells()
 self:LoadMenu()
 Callback.Add("Tick", function() self:Tick() end)
