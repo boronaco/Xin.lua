@@ -35,7 +35,7 @@ function TartoGnar.LoadSpells()
 end
 
 function TartoGnar:LoadMenu()
-	TartoGnar.Menu = MenuElement({id = "TartoGnar", name = "Gnar", type = MENU, leftIcon ="https://puu.sh/w7a7c/7a388ab008.png"})
+	TartoGnar.Menu = MenuElement({id = "TartoGnar", name = "Gnar", type = MENU})
 	TartoGnar.Menu:MenuElement({id = "Combo", name = "Combo", type = MENU})
 	TartoGnar.Menu:MenuElement({id = "LaneClear", name = "LaneClear", type = MENU})
 	TartoGnar.Menu:MenuElement({id = "Harass", name = "Harass", type = MENU})
