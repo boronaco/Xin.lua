@@ -63,11 +63,11 @@ Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = false, leftIcon =
 --Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true, leftIcon = QIcon})
 
 --Drawings
-Menu.Drawings:MenuElement({id = "DrawAuto", name = "Draw AA Range", value = true, leftIcon = HeroIcon})
-Menu.Drawings:MenuElement({id = "DrawQ", name = "Draw Q Range", value = true, leftIcon = QIcon})
-Menu.Drawings:MenuElement({id = "DrawW", name = "Draw W Range", value = true, leftIcon = WIcon})
-Menu.Drawings:MenuElement({id = "DrawE", name = "Draw E Range", value = true, leftIcon = EIcon})
-Menu.Drawings:MenuElement({id = "DrawR", name = "Draw R Range", value = true, leftIcon = RIcon})
+Menu.Drawings:MenuElement({id = "DrawAuto", name = "Draw AA Range", value = false, leftIcon = HeroIcon})
+Menu.Drawings:MenuElement({id = "DrawQ", name = "Draw Q Range", value = false, leftIcon = QIcon})
+Menu.Drawings:MenuElement({id = "DrawW", name = "Draw W Range", value = false, leftIcon = WIcon})
+Menu.Drawings:MenuElement({id = "DrawE", name = "Draw E Range", value = false, leftIcon = EIcon})
+Menu.Drawings:MenuElement({id = "DrawR", name = "Draw R Range", value = false, leftIcon = RIcon})
 
 function Tick()
 	if H.dead then return end
