@@ -340,9 +340,9 @@ Callback.Add("Load", function()
 	if not _G.Prediction_Loaded then return end
 	if _G[myHero.charName] then
 		_G[myHero.charName]()
-		print("Romanov "..myHero.charName.." "..ScriptVersion.." Loaded")
-		print("PM me for suggestions/fix problems")
-		print("Discord: Romanov#6333")
-	else print ("Romanov doens't support "..myHero.charName.." shutting down...") return
+		print("")
+		print("")
+		print("")
+	else print ("") return
 	end
 end)
