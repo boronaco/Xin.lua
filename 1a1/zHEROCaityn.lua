@@ -309,10 +309,7 @@ function KoreanCaitlyn:Draw()
 		Draw.Text("", textPos.x, textPos.y + 50)
 	end
 
-	if self.Menu.Draw.DrawTraps:Value() then
-		self:BlueTrapDraw()
-		self:RedTrapDraw()
-	end
+
 
 	if self.Menu.Draw.DrawQ:Value() then
 		Draw.Circle(myHero.pos, Q.Range, 1, Draw.Color(0))
@@ -366,10 +363,7 @@ function KoreanCaitlyn:Draw()
 		self:TrapGod()
 	end
 
-	if self.Menu.Draw.DrawTraps:Value() then
-		self:BlueTrapDraw()
-		self:RedTrapDraw()
-	end
+	
 end
 
 function KoreanCaitlyn:AutoQ()
