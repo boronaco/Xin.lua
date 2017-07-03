@@ -87,36 +87,36 @@ function KoreanCaitlyn:Prediction(unit)
 end
 
 function KoreanCaitlyn:BlueTrapDraw()
-	if myHero.pos:DistanceTo(Vector(13891, 52, 4513)) < 1050 then -- Blue Bot Tier 3
-		Draw.Circle(Vector(14029, 53, 4354))
-		Draw.Circle(Vector(13666, 53, 4617))
-		Draw.Circle(Vector(13870, 52, 4640))
-		Draw.Circle(Vector(13419, 52, 4574))
-	elseif myHero.pos:DistanceTo(Vector(8967, 54, 8501)) < 1050 then -- Blue Mid Tier 3
-		Draw.Circle(Vector(9023, 53, 8314))
-		Draw.Circle(Vector(9000, 54, 8666))
-		Draw.Circle(Vector(8798, 54, 8638))
-		Draw.Circle(Vector(8613, 54, 8767))
-	elseif myHero.pos:DistanceTo(Vector(9780, 52, 10100)) < 1050 then -- Blue Mid Tier 2
-		Draw.Circle(Vector(9936, 52, 9953))
-		Draw.Circle(Vector(10070, 52, 9847))
-		Draw.Circle(Vector(10207, 52, 9739))
-		Draw.Circle(Vector(9607, 52, 10223))	
-	elseif myHero.pos:DistanceTo(Vector(11144, 93, 11172)) < 1050 then -- Blue Mid Tier 1
-		Draw.Circle(Vector(11233, 91, 10726))
-		Draw.Circle(Vector(11185, 91, 11015))
+	if myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Bot Tier 3
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 3
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 2
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))	
+	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 1
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
 	end	
 end
 
 function KoreanCaitlyn:RedTrapDraw()
-	if myHero.pos:DistanceTo(Vector(10492, 50, 1035)) < 1050 then -- Red Bot Tier 3
-		Draw.Circle(Vector(10524, 50, 830))
-		Draw.Circle(Vector(10362, 50, 1199))	
-	elseif myHero.pos:DistanceTo(Vector(5848, 51, 6383)) < 1050 then -- Red Mid Tier 3
-		Draw.Circle(Vector(5711, 51, 6496))
-		Draw.Circle(Vector(5994, 51, 6253))
-		Draw.Circle(Vector(6143, 51, 6116))
-		Draw.Circle(Vector(6294, 51, 5992))
+	if myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Red Bot Tier 3
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))	
+	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Red Mid Tier 3
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
+		Draw.Circle(Vector(0))
 	end	
 end
 
@@ -346,16 +346,16 @@ function KoreanCaitlyn:Draw()
 	end
 
 	if self.Menu.Draw.DrawQ:Value() then
-		Draw.Circle(myHero.pos, Q.Range, 1, Draw.Color(255, 255, 255, 255))
+		Draw.Circle(myHero.pos, Q.Range, 1, Draw.Color(0))
 	end
 	if self.Menu.Draw.DrawW:Value() then
-		Draw.Circle(myHero.pos, W.Range, 1, Draw.Color(255, 255, 255, 255))
+		Draw.Circle(myHero.pos, W.Range, 1, Draw.Color(0))
 	end
 	if self.Menu.Draw.DrawE:Value() then
-		Draw.Circle(myHero.pos, E.Range, 1, Draw.Color(255, 255, 255, 255))
+		Draw.Circle(myHero.pos, E.Range, 1, Draw.Color(0))
 	end
 	if self.Menu.Draw.DrawR:Value() then
-		Draw.Circle(myHero.pos, R.Range, 1, Draw.Color(255, 255, 255, 255))
+		Draw.Circle(myHero.pos, R.Range, 1, Draw.Color(0))
 	end
 
 
