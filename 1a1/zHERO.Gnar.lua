@@ -31,7 +31,7 @@ local customRvalid = 0
 
 print("")
 
-local Menu = MenuElement({id = "Menu", name = "Gnar"})
+local Menu = MenuElement({id = "Menu", name = "Gnar", type = MENU, leftIcon = HeroIcon})
 Menu:MenuElement({id = "Combo", name = "Combo", type = MENU})
 Menu:MenuElement({id = "Harass", name = "Harass", type = MENU})
 Menu:MenuElement({id = "Laneclear", name = "Laneclear", type = MENU})
@@ -42,8 +42,8 @@ Menu:MenuElement({name = "Version : 1.0", type = SPACE})
 Menu:MenuElement({name = "By Tarto", type = SPACE})
 
 --Combo
-Menu.Combo:MenuElement({id = "UseQ", name = "Use Q", value = true})
-Menu.Combo:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true})
+Menu.Combo:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
+Menu.Combo:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true, leftIcon = QMIcon})
 Menu.Combo:MenuElement({id = "UseW", name = "Use W MEGA", value = true, leftIcon = WIcon})
 --Menu.Combo:MenuElement({id = "UseR", name = "Use R", value = true, leftIcon = RIcon})
 
