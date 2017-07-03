@@ -31,7 +31,7 @@ local customRvalid = 0
 
 print("")
 
-local Menu = MenuElement({id = "Menu", name = "Gnar", type = MENU, leftIcon = HeroIcon})
+local Menu = MenuElement({type = MENU, id = "Gnar", name = "gnar "})
 Menu:MenuElement({id = "Combo", name = "Combo", type = MENU})
 Menu:MenuElement({id = "Harass", name = "Harass", type = MENU})
 Menu:MenuElement({id = "Laneclear", name = "Laneclear", type = MENU})
