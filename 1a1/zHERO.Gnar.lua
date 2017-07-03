@@ -20,7 +20,7 @@ exclude: a list of units or a unit
 ]]
 
 function TartoGnar:__init()
-	PrintChat("TartoGnar Loaded !")
+	PrintChat("")
 	self:LoadSpells()
 	self:LoadMenu()
 	Callback.Add("Tick", function() self:Tick() end)
@@ -70,7 +70,7 @@ function TartoGnar:LoadMenu()
 	TartoGnar.Menu.Killsteal:MenuElement({id = "StealQM", name = "Killsteal Q MEGA", value = false, leftIcon = "https://puu.sh/w7aQP/c2ab4c230c.png"})
 	TartoGnar.Menu.Killsteal:MenuElement({id = "StealR", name = "Killsteal R", value = false, leftIcon = "https://puu.sh/w7aYn/a4ac942f9c.png"})
 
-	PrintChat("GnarTarto Menu Loaded.")
+	PrintChat("")
 end
 
 function TartoGnar:Tick()
