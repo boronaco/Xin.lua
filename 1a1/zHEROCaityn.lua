@@ -86,39 +86,8 @@ function KoreanCaitlyn:Prediction(unit)
 
 end
 
-function KoreanCaitlyn:BlueTrapDraw()
-	if myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Bot Tier 3
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 3
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 2
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))	
-	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Blue Mid Tier 1
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-	end	
-end
 
-function KoreanCaitlyn:RedTrapDraw()
-	if myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Red Bot Tier 3
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))	
-	elseif myHero.pos:DistanceTo(Vector(0)) < 1050 then -- Red Mid Tier 3
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-		Draw.Circle(Vector(0))
-	end	
-end
+
 
 local startEQCombo = false
 function KoreanCaitlyn:KTDeft(target, target2)
