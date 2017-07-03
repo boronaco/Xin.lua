@@ -42,32 +42,32 @@ Menu:MenuElement({name = "Version : 1.0", type = SPACE})
 Menu:MenuElement({name = "By Tarto", type = SPACE})
 
 --Combo
-Menu.Combo:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
-Menu.Combo:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true, leftIcon = QMIcon})
-Menu.Combo:MenuElement({id = "UseW", name = "Use W MEGA", value = true, leftIcon = WIcon})
---Menu.Combo:MenuElement({id = "UseR", name = "Use R", value = true, leftIcon = RIcon})
+Menu.Combo:MenuElement({id = "UseQ", name = "Use Q", value = true})
+Menu.Combo:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true})
+Menu.Combo:MenuElement({id = "UseW", name = "Use W MEGA", value = true})
+--Menu.Combo:MenuElement({id = "UseR", name = "Use R", value = true})
 
 --Harass
-Menu.Harass:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
-Menu.Harass:MenuElement({id = "UseQM", name = "Use Q MEGA", value = false, leftIcon = QMIcon})
-Menu.Harass:MenuElement({id = "UseW", name = "Use W MEGA", value = true, leftIcon = WIcon})
+Menu.Harass:MenuElement({id = "UseQ", name = "Use Q", value = true})
+Menu.Harass:MenuElement({id = "UseQM", name = "Use Q MEGA", value = false})
+Menu.Harass:MenuElement({id = "UseW", name = "Use W MEGA", value = true})
 
 --Laneclear
-Menu.Laneclear:MenuElement({id = "UseQ", name = "Use Q", value = false, leftIcon = QIcon})
---Menu.Laneclear:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true, leftIcon = QMIcon})
---Menu.Laneclear:MenuElement({id = "UseW", name = "Use W MEGA", value = true, leftIcon = WIcon})
+Menu.Laneclear:MenuElement({id = "UseQ", name = "Use Q", value = false})
+--Menu.Laneclear:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true})
+--Menu.Laneclear:MenuElement({id = "UseW", name = "Use W MEGA", value = true})
 
 --Lashit
-Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = false, leftIcon = QIcon})
---Menu.Lasthit:MenuElement({id = "UseQM", name = "Use QM", value = true, leftIcon = QIcon})
---Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true, leftIcon = QIcon})
+Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = false})
+--Menu.Lasthit:MenuElement({id = "UseQM", name = "Use QM", value = true})
+--Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true})
 
 --Drawings
 Menu.Drawings:MenuElement({id = "DrawAuto", name = "Draw AA Range", value = false, leftIcon = HeroIcon})
-Menu.Drawings:MenuElement({id = "DrawQ", name = "Draw Q Range", value = false, leftIcon = QIcon})
-Menu.Drawings:MenuElement({id = "DrawW", name = "Draw W Range", value = false, leftIcon = WIcon})
-Menu.Drawings:MenuElement({id = "DrawE", name = "Draw E Range", value = false, leftIcon = EIcon})
-Menu.Drawings:MenuElement({id = "DrawR", name = "Draw R Range", value = false, leftIcon = RIcon})
+Menu.Drawings:MenuElement({id = "DrawQ", name = "Draw Q Range", value = false})
+Menu.Drawings:MenuElement({id = "DrawW", name = "Draw W Range", value = false})
+Menu.Drawings:MenuElement({id = "DrawE", name = "Draw E Range", value = false})
+Menu.Drawings:MenuElement({id = "DrawR", name = "Draw R Range", value = false})
 
 function Tick()
 	if H.dead then return end
