@@ -57,7 +57,7 @@ function TartoGnar:LoadMenu()
 	TartoGnar.Menu.Harass:MenuElement({id = "UseQM", name = "Use Q MEGA", value = true})
 	TartoGnar.Menu.Harass:MenuElement({id = "UseWM", name = "Use W", value = true})
 -- LastHit Sub-Menu
-	TartoGnar.Menu.LastHit:MenuElement({id = "UseQ", name = "[SOON]Use Q", value = true"})
+	TartoGnar.Menu.LastHit:MenuElement({id = "UseQ", name = "[SOON]Use Q", value = true})
 	TartoGnar.Menu.LastHit:MenuElement({id = "UseQM", name = "[SOON]Use Q MEGA", value = false})
 	TartoGnar.Menu.LastHit:MenuElement({id = "UseWM", name = "[SOON]Use W", value = false})
 -- Draw Sub-Menu
