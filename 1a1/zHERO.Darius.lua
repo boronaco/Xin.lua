@@ -1,4 +1,4 @@
-local KoreanChamps = {"Ahri", "Brand", "Blitzcrank", "Darius", "Diana", "KogMaw", "Jhin"}
+local KoreanChamps = {"Darius", "Diana}
 if not table.contains(KoreanChamps, myHero.charName)  then print("" ..myHero.charName.. " Is Not (Yet) Supported") return end
 
 local KoreanMechanics = MenuElement({type = MENU, id = "KoreanMechanics", name = "Korean Mechanics Reborn | "})
