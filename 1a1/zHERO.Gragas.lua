@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
-if myHero.charName ~= "Gragas" then return end 
+if myHero.charName ~= "Gragas" then return end
 ------------------------------------------------------------------------------------------------------------------------------------------
 local Author,Version,Patch = "Romanov","Alpha v1","RIOT: 7.12"
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -183,15 +183,15 @@ end
 LastFlash = Game.Timer()
 ------------------------------------------------------------------------------------------------------------------------------------------
 --- Create Menu
-local Gragas = MenuElement({type = MENU, id = "Gragas", name = "Gragas"})
+local Gragas = MenuElement({type = MENU, id = "Gragas", name = "Retired Gragas", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/Gragas/Gragas.png"})
 ------------------------------------------------------------------------------------------------------------------------------------------
 --- Main Menu
-Gragas:MenuElement({type = MENU, id = "Q", name = "Q: Barrel Roll"})
-Gragas:MenuElement({type = MENU, id = "W", name = "W: Drunken Rage"})
-Gragas:MenuElement({type = MENU, id = "E", name = "E: Body Slam"})
-Gragas:MenuElement({type = MENU, id = "R", name = "R: Explosive Cask"})
-Gragas:MenuElement({type = MENU, id = "M", name = "General Settings"})
-Gragas:MenuElement({type = MENU, id = "A", name = "Activator Settings"})
+Gragas:MenuElement({type = MENU, id = "Q", name = "Q: Barrel Roll", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/Gragas/Spells/Q.png"})
+Gragas:MenuElement({type = MENU, id = "W", name = "W: Drunken Rage", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/Gragas/Spells/W.png"})
+Gragas:MenuElement({type = MENU, id = "E", name = "E: Body Slam", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/Gragas/Spells/E.png"})
+Gragas:MenuElement({type = MENU, id = "R", name = "R: Explosive Cask", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/Gragas/Spells/R.png"})
+Gragas:MenuElement({type = MENU, id = "M", name = "General Settings", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/General/Items/Mana.png"})
+Gragas:MenuElement({type = MENU, id = "A", name = "Activator Settings", leftIcon = "https://raw.githubusercontent.com/ParadOx999/GamingOnSteroids-EXT/master/General/Items/Control.png"})
 Gragas:MenuElement({id = "Author", name = "Author", drop = {Author}})
 Gragas:MenuElement({id = "Version", name = "Version", drop = {Version}})
 Gragas:MenuElement({id = "Patch", name = "Patch", drop = {Patch}})
@@ -199,18 +199,18 @@ Gragas:MenuElement({id = "Patch", name = "Patch", drop = {Patch}})
 --- Q
 Gragas.Q:MenuElement({id = "Enable", name = "Enable", value = true})
 Gragas.Q:MenuElement({id = "Combo", name = "Use in Combo", value = true})
-Gragas.Q:MenuElement({id = "Lane", name = "Use in Laneclear", value = false})
+Gragas.Q:MenuElement({id = "Lane", name = "Use in Laneclear", value = true})
 Gragas.Q:MenuElement({id = "LMin", name = "X Minions (lane)", value = 5, min = 1, max = 7})
 Gragas.Q:MenuElement({id = "Jungle", name ="Use in Jungleclear", value = true})
 Gragas.Q:MenuElement({id = "JMin", name = "X Minons (jungle)", value = 1, min = 1, max = 5})
-Gragas.Q:MenuElement({id = "Harass", name = "Use in Harass", value = false})
+Gragas.Q:MenuElement({id = "Harass", name = "Use in Harass", value = true})
 Gragas.Q:MenuElement({id = "KS", name = "Use to Killsteal", value = true})
-Gragas.Q:MenuElement({id = "Draw", name = "Draw Range", value = false})
+Gragas.Q:MenuElement({id = "Draw", name = "Draw Range", value = true})
 ------------------------------------------------------------------------------------------------------------------------------------------
 --- W
 Gragas.W:MenuElement({id = "Enable", name = "Enable", value = true})
 Gragas.W:MenuElement({id = "Combo", name = "Use in Combo", value = true})
-Gragas.W:MenuElement({id = "Lane", name = "Use in Lancelar", value = false})
+Gragas.W:MenuElement({id = "Lane", name = "Use in Lancelar", value = true})
 Gragas.W:MenuElement({id = "LMin", name = "X Minions (lane)", value = 3, min = 1, max = 7})
 Gragas.W:MenuElement({id = "Jungle", name ="Use in Jungleclear", value = true})
 Gragas.W:MenuElement({id = "JMin", name = "X Minons (jungle)", value = 1, min = 1, max = 5})
@@ -220,26 +220,26 @@ Gragas.W:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 Gragas.E:MenuElement({id = "Enable", name = "Enable", value = true})
 Gragas.E:MenuElement({id = "Combo", name = "Use in Combo", value = true})
 Gragas.E:MenuElement({id = "Lane", name = "Use in Laneclear", value = false})
-Gragas.E:MenuElement({id = "Jungle", name ="Use in Jungleclear", value = false})
+Gragas.E:MenuElement({id = "Jungle", name ="Use in Jungleclear", value = true})
 Gragas.E:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 Gragas.E:MenuElement({id = "KS", name = "Use to Killsteal", value = true})
-Gragas.E:MenuElement({id = "Wall", name = "E Walljump", key = string.byte("z")})
+Gragas.E:MenuElement({id = "Wall", name = "E Walljump", key = string.byte("Z")})
 DelayAction(function()
 	if myHero:GetSpellData(SUMMONER_1).name == "SummonerFlash"
 	or myHero:GetSpellData(SUMMONER_2).name == "SummonerFlash" then
-		Gragas.E:MenuElement({id = "Flash", name = "E + Flash", key = string.byte("+")})
+		Gragas.E:MenuElement({id = "Flash", name = "E + Flash", key = string.byte("A")})
 	end
 end, 2)
-Gragas.E:MenuElement({id = "Draw", name = "Draw Range", value = false})
+Gragas.E:MenuElement({id = "Draw", name = "Draw Range", value = true})
 ------------------------------------------------------------------------------------------------------------------------------------------
 --- R
 Gragas.R:MenuElement({id = "Enable", name = "Enable", value = true})
-Gragas.R:MenuElement({id = "Combo", name = "Use in Combo", value = false})
+Gragas.R:MenuElement({id = "Combo", name = "Use in Combo", value = true})
 Gragas.R:MenuElement({id = "Info", name = "Note: Only if Combo Killable", type = SPACE})
 Gragas.R:MenuElement({id = "KS", name = "Use to Killsteal", value = true})
-Gragas.R:MenuElement({id = "Insec", name = "Insec", key = string.byte(",")})
+Gragas.R:MenuElement({id = "Insec", name = "Insec", key = string.byte("S")})
 Gragas.R:MenuElement({id = "Draw", name = "Draw Range", value = false})
-Gragas.R:MenuElement({id = "DrawI", name = "Draw Insec Range", value = false})
+Gragas.R:MenuElement({id = "DrawI", name = "Draw Insec Range", value = true})
 ------------------------------------------------------------------------------------------------------------------------------------------
 --- General
 Gragas.M:MenuElement({id = "Combo", name = "Mana % to Combo", value = 0, min = 0, max = 100})
@@ -257,7 +257,7 @@ Gragas.A.P:MenuElement({id = "HP", name = "Health % to Potion", value = 60, min 
 Gragas.A:MenuElement({type = MENU, id = "I", name = "Items"})
 Gragas.A.I:MenuElement({id = "RO", name = "Randuin's Omen", value = true})
 Gragas.A.I:MenuElement({id = "Proto", name = "Hextec Protobelt-01", value = true})
-Gragas.A:MenuElement({type = MENU, id = "-", name = "Summoner Spells"})
+Gragas.A:MenuElement({type = MENU, id = "S", name = "Summoner Spells"})
 DelayAction(function()
 	if myHero:GetSpellData(SUMMONER_1).name == "SummonerSmite" or myHero:GetSpellData(SUMMONER_1).name == "S5_SummonerSmitePlayerGanker" or myHero:GetSpellData(SUMMONER_1).name == "S5_SummonerSmiteDuel"
 	or myHero:GetSpellData(SUMMONER_2).name == "SummonerSmite" or myHero:GetSpellData(SUMMONER_2).name == "S5_SummonerSmitePlayerGanker" or myHero:GetSpellData(SUMMONER_1).name == "S5_SummonerSmiteDuel" then
@@ -621,3 +621,4 @@ Callback.Add("Draw", function()
 	end
 ------------------------------------------------------------------------------------------------------------------------------------------
 end)
+------------------------------------------------------------------------------------------------------------------------------------------
