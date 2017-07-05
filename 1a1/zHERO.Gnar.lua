@@ -10,11 +10,7 @@ local QM = {range = 1150, delay = 0.5, speed = 2100, width = 80}
 local W = {range = 600, delay = 0.6, speed = math.huge, width = 80}
 local R = {range = 475, delay = 0.25, speed = math.huge, width = 500}
 local AA = { Up = 0, Down = 0, Mrange = 335}
-local HeroIcon = "https://puu.sh/w7a7c/7a388ab008.png"
-local QIcon = "https://puu.sh/w7aOp/f57d73b4c0.png"
-local QMIcon = "https://puu.sh/w7aQP/c2ab4c230c.png"
-local WIcon = "https://puu.sh/w7aTE/524fd39032.png"
-local RIcon = "https://puu.sh/w7aYn/a4ac942f9c.png"
+
 local H = myHero
 local ColorY, ColorZ = Draw.Color(255, 255, 255, 100), Draw.Color(255, 255, 200, 100)
 local ping = Game.Latency()/1000
@@ -29,9 +25,9 @@ local customQMvalid = 0
 local customWvalid = 0
 local customRvalid = 0
 
-print("")
+print("Competitive Gnar Loaded !")
 
-local Menu = MenuElement({type = MENU, id = "Gnar", name = "gnar "})
+local Menu = MenuElement({id = "Menu", name = "Gnar", type = MENU})
 Menu:MenuElement({id = "Combo", name = "Combo", type = MENU})
 Menu:MenuElement({id = "Harass", name = "Harass", type = MENU})
 Menu:MenuElement({id = "Laneclear", name = "Laneclear", type = MENU})
@@ -63,7 +59,7 @@ Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = false})
 --Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true})
 
 --Drawings
-Menu.Drawings:MenuElement({id = "DrawAuto", name = "Draw AA Range", value = false, leftIcon = HeroIcon})
+Menu.Drawings:MenuElement({id = "DrawAuto", name = "Draw AA Range", value = false})
 Menu.Drawings:MenuElement({id = "DrawQ", name = "Draw Q Range", value = false})
 Menu.Drawings:MenuElement({id = "DrawW", name = "Draw W Range", value = false})
 Menu.Drawings:MenuElement({id = "DrawE", name = "Draw E Range", value = false})
