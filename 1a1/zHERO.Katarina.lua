@@ -1,13 +1,4 @@
---[[------------------------------------------------------------------------------------------------------------
 
- ____  __.       __               .__             __________                    .__            
-|    |/ _|____ _/  |______ _______|__| ____ _____ \______   \____   ____   ____ |  |__   ____  
-|      < \__  \\   __\__  \\_  __ \  |/    \\__  \ |     ___/  _ \ /    \_/ ___\|  |  \_/ __ \ 
-|    |  \ / __ \|  |  / __ \|  | \/  |   |  \/ __ \|    |  (  <_> )   |  \  \___|   Y  \  ___/ 
-|____|__ (____  /__| (____  /__|  |__|___|  (____  /____|   \____/|___|  /\___  >___|  /\___  >
-        \/    \/          \/              \/     \/                    \/     \/     \/     \/
-
---------------------------------------------------------------------------------------------------------------]]
 --ver. 1.3
 
 if myHero.charName ~= "Katarina" then return end
@@ -35,18 +26,18 @@ local Spells = {
 function bulkKata:__init()
 	self:Menu()
 	Callback.Add("Tick", function() self:Tick() end)
-	PrintChat("bulkKata : Loaded")
+	PrintChat("")
 end
 
 function bulkKata:Menu()
-	Menu = MenuElement({type = MENU, id = "bulkKata", name = "bulkKata",leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Katarina.png"})
+	Menu = MenuElement({type = MENU, id = "bulkKata", name = "bulkKata"})
 
 	Menu:MenuElement({type = MENU, id = "Combo", name = "[Combo Manager]"})
-	Menu.Combo:MenuElement({id = "Q", name = "Use Q", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaQ.png"})
-	Menu.Combo:MenuElement({id = "W", name = "Use W", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaW.png"})
-	Menu.Combo:MenuElement({id = "E", name = "Use E", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaEWrapper.png"})
-	Menu.Combo:MenuElement({id = "R", name = "Use R", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaR.png"})
-	Menu.Combo:MenuElement({id = "Hex", name = "Use Hextech", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaR.png"})
+	Menu.Combo:MenuElement({id = "Q", name = "Use Q", value = true})
+	Menu.Combo:MenuElement({id = "W", name = "Use W", value = true})
+	Menu.Combo:MenuElement({id = "E", name = "Use E", value = true})
+	Menu.Combo:MenuElement({id = "R", name = "Use R", value = true})
+	Menu.Combo:MenuElement({id = "Hex", name = "Use Hextech", value = true})
 
 	Menu:MenuElement({type = MENU, id = "RManager", name = "[R Manager]"})
 	Menu.RManager:MenuElement({id = "Info", name = "Score For Each Champions :", type = SPACE})
@@ -59,18 +50,18 @@ function bulkKata:Menu()
 	Menu.RManager:MenuElement({id = "MinR", name = "Min Score to Cast R", value = 1 , min = 1, max = count * 3})
 
 	Menu:MenuElement({type = MENU, id = "Harass", name = "[Harass Manager]"})
-	Menu.Harass:MenuElement({id = "Q", name = "Use Q", value = true})
-	Menu.Harass:MenuElement({id = "W", name = "Use W", value = true})
+	Menu.Harass:MenuElement({id = "Q", name = "Use Q", value = false})
+	Menu.Harass:MenuElement({id = "W", name = "Use W", value = false})
 	Menu.Harass:MenuElement({id = "E", name = "Use E", value = false})
-	Menu.Harass:MenuElement({id = "Disabled", name = "Disable All", value = false})
+	Menu.Harass:MenuElement({id = "Disabled", name = "Disable All", value = true})
 
 	Menu:MenuElement({type = MENU, id = "Ks", name = "[KS Manager]"})
-	Menu.Ks:MenuElement({id = "Q", name = "Use Q", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaQ.png"})
-	Menu.Ks:MenuElement({id = "W", name = "Use W", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaW.png"})
-	Menu.Ks:MenuElement({id = "E", name = "Use E", value = true,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaEWrapper.png"})
-	Menu.Ks:MenuElement({id = "R", name = "Use R", value = false,leftIcon="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/KatarinaR.png"})
+	Menu.Ks:MenuElement({id = "Q", name = "Use Q", value = true})
+	Menu.Ks:MenuElement({id = "W", name = "Use W", value = true})
+	Menu.Ks:MenuElement({id = "E", name = "Use E", value = true})
+	Menu.Ks:MenuElement({id = "R", name = "Use R", value = false})
 	if myHero:GetSpellData(4).name == "SummonerDot" or myHero:GetSpellData(5).name == "SummonerDot" then
-		Menu.Ks:MenuElement({id = "UseIgn", name = "Use Ignite", value = false,leftIcon="http://pm1.narvii.com/5792/0ce6cda7883a814a1a1e93efa05184543982a1e4_hq.jpg"})
+		Menu.Ks:MenuElement({id = "UseIgn", name = "Use Ignite", value = false})
 	end
 	Menu.Ks:MenuElement({id = "Recall", name = "Disable During Recall", value = true})
 	Menu.Ks:MenuElement({id = "Disabled", name = "Disable All", value = false})
