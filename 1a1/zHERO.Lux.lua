@@ -13,7 +13,7 @@ local E = {Delay = 0.250, Radius = 200, Range = 1250, Speed = 900, Collision = f
 local R = {Delay = 1, Radius = 120, Range = 3300, Speed = math.huge, Collision = false}
 
 -- Menu local
-local Menu = MenuElement({type = MENU, id = "SmartLux", name = "Smart Lux", leftIcon="https://puu.sh/urze2/9ecca9ea34.jpg"})
+local Menu = MenuElement({type = MENU, id = "SmartLux", name = "Smart Lux"})
 
 -- Keys Menu
 Menu:MenuElement({type = MENU, id = "Key", name = "Key Settings"})
@@ -29,18 +29,18 @@ Menu:MenuElement({type = MENU, id = "Combo", name = "Combo Settings"})
 Menu.Combo:MenuElement({id = "ComboQ", name = "Use Q", value = true})
 Menu.Combo:MenuElement({id = "SmartQ", name = "Smart Q WIP", value = true})
 Menu.Combo:MenuElement({id = "ComboE", name = "Use E", value = true})
-Menu.Combo:MenuElement({id = "ComboR", name = "Use R", value = true})
+Menu.Combo:MenuElement({id = "ComboR", name = "Use R", value = false})
 Menu.Combo:MenuElement({id = "SmartR", name = "Smart R - WIP", value = true})
 
 -- Harass Menu
 Menu:MenuElement({type = MENU, id = "Harass", name = "Harass Settings"})
-Menu.Harass:MenuElement({id = "HarassQ", name = "Use Q", value = true})
+Menu.Harass:MenuElement({id = "HarassQ", name = "Use Q", value = false})
 Menu.Harass:MenuElement({id = "HarassE", name = "Use E", value = true})
-Menu.Harass:MenuElement({id = "HarassMana", name = "Min. Mana", value = 70, min = 0, max = 100})
+Menu.Harass:MenuElement({id = "HarassMana", name = "Min. Mana", value = 50, min = 0, max = 100})
 
 -- Farm Menu
 Menu:MenuElement({type = MENU, id = "Farm", name = "Farm Settings"})
-Menu.Farm:MenuElement({id = "FarmSpells", name = "Farm Spells", value = true})
+Menu.Farm:MenuElement({id = "FarmSpells", name = "Farm Spells", value = false})
 Menu.Farm:MenuElement({id = "FarmE", name = "Use E", value = true})
 Menu.Farm:MenuElement({id = "FarmMana", name = "Min. Mana", value = 70, min = 0, max = 100})
 
@@ -51,15 +51,15 @@ Menu.LastHit:MenuElement({id = "LastHitMana", name = "Min. Mana", value = 40, mi
 
 Menu:MenuElement({type = MENU, id = "Shield", name = "Smart W Usage"})
 Menu.Shield:MenuElement({id = "Auto", name = "Auto Shield", value = true})
-Menu.Shield:MenuElement({id = "Mode", name = "Only in Combo", value = false})
+Menu.Shield:MenuElement({id = "Mode", name = "Only in Combo", value = true})
 Menu.Shield:MenuElement({id = "MinHealth", name = "Min Health -> %", value = 20,min = 0, max = 100})
 
 -- Ultimate Misc Menu
 Menu:MenuElement({type = MENU, id = "AutoEvent", name = "Auto Event Misc - WORK IN PROGRESS"})
 Menu.AutoEvent:MenuElement({id = "AutoRks", name = "Lux will R to Kill Single enemy ON CC", value = true})
 Menu.AutoEvent:MenuElement({id = "AutoQ", name = "Q on CC Enemy (OP in Teamfighting)", value = true})
-Menu.AutoEvent:MenuElement({id = "KsR", name = "Lux Will R on ANY ENEMY LOW HP to KSecure Kappa", value = true})
-Menu.AutoEvent:MenuElement({id = "AutoRtf", name = "Set R to hit as much enemies as you want:", value = 3, min = 1, max = 5, step = 1})
+Menu.AutoEvent:MenuElement({id = "KsR", name = "Lux Will R on ANY ENEMY LOW HP to KSecure Kappa", value = false})
+Menu.AutoEvent:MenuElement({id = "AutoRtf", name = "Set R to hit as much enemies as you want:", value = 5, min = 1, max = 5, step = 1})
 
 -- General Misc Menu
 Menu:MenuElement({type = MENU, id = "Misc", name = "Misc Settings"})
@@ -69,10 +69,10 @@ Menu.Misc:MenuElement({id = "Debug", name = "Debug Mode", value = false})
 
 -- Drawings Menu
 Menu:MenuElement({type = MENU, id = "Draw", name = "Drawing Settings"})
-Menu.Draw:MenuElement({id = "DrawQ", name = "Draw Q", value = true})
-Menu.Draw:MenuElement({id = "DrawE", name = "Draw E", value = true})
-Menu.Draw:MenuElement({id = "DrawR", name = "Draw R", value = true})
-Menu.Draw:MenuElement({id = "DrawTarget", name = "Draw Target", value = true})
+Menu.Draw:MenuElement({id = "DrawQ", name = "Draw Q", value = false})
+Menu.Draw:MenuElement({id = "DrawE", name = "Draw E", value = false})
+Menu.Draw:MenuElement({id = "DrawR", name = "Draw R", value = false})
+Menu.Draw:MenuElement({id = "DrawTarget", name = "Draw Target", value = false})
 
 --Call me Stupid for not Setting this Function before.
 --[[
@@ -291,7 +291,7 @@ if not Menu.Shield.Mode:Value() then
 			local ePos = eTarget:GetPrediction(E.Speed, E.Delay)
 				CastSpell(HK_E, ePos, E.Range, E.Delay*1000)
 				if Menu.Misc.Debug:Value() then
-                PrintChat("Combo E Predict")
+                PrintChat("")
 			end
 		end
 		end
@@ -301,7 +301,7 @@ local eTarget = STarget(E.Range * Menu.Misc.MaxRange:Value())
 			local ePos = eTarget:GetPrediction(E.Speed, E.Delay)
 				CastSpell(HK_E, ePos, E.Range, E.Delay*1000)
 				if Menu.Misc.Debug:Value() then
-				PrintChat("Auto Smart Explosion")
+				PrintChat("")
 			end
 		end
 		end
@@ -317,7 +317,7 @@ end
           CastSpell(HK_Q ,qPos ,Q.Range , Q.Delay*1000)
 				--Control.CastSpell(HK_Q, qPos)
 				if Menu.Misc.Debug:Value() then
-                PrintChat("Smart Q After E Predict")
+                PrintChat("")
 			end
 		end
 		end
@@ -332,7 +332,7 @@ end
           CastSpell(HK_Q ,qPos ,Q.Range , Q.Delay*1000)
 				--Control.CastSpell(HK_Q, qPos)
 				if Menu.Misc.Debug:Value() then
-                PrintChat("Q DEFAULT")
+                PrintChat("")
 		end
 		end
 		end
@@ -351,7 +351,7 @@ end
 				CastSpell(HK_E, ePos, E.Range, E.Delay*1000)
 				local Evar = false -- Como E esta en en Aire desactivamos mas Cast hasta la Q
 				if Menu.Misc.Debug:Value() then
-                PrintChat("Combo E THROW BEFORE Q")
+                PrintChat("")
 			end
 		end
 		end
@@ -365,7 +365,7 @@ end
           --local Evar = true -- Reiniciamos bucle de E
 				--local Evar = 0
 				if Menu.Misc.Debug:Value() then
-                PrintChat("Combo E EXPLODED AFTER E-Q")
+                PrintChat("")
             end
         end
 		end
@@ -382,7 +382,7 @@ end
 				local rPos = rTarget:GetPrediction(R.Speed, R.Delay)
 				Control.CastSpell(HK_R, rPos)
 				if Menu.Misc.Debug:Value() then
-				PrintChat("Debug: BAD R COMBO CAST")
+				PrintChat("")
 				end
 			--end
 			end
@@ -397,9 +397,9 @@ end
 			local rTarget = STarget(R.Range * Menu.Misc.MaxRange:Value())
 			if rTarget and IsImmobileTarget(rTarget) then
 			if Menu.Misc.Debug:Value() then
-			PrintChat("Target Not Killeable with Smart R")
+			PrintChat("")
 			end
-			--PrintChat("Target Not Killeable with Smart R")
+			--PrintChat("")
 				local rPos = rTarget:GetPrediction(R.Speed, R.Delay)
 local hp = rTarget.health + rTarget.shieldAP
 local dmg = CalcMagicalDamage(myHero,rTarget,200 + 100*myHero:GetSpellData(_R).level + (0.75*myHero.ap))
@@ -410,10 +410,10 @@ PrintChat(dmg2)
 end
 						if hp < dmg2 then
 						if Menu.Misc.Debug:Value() then
-						PrintChat("Debug:Combo Smart R CAST")
+						PrintChat("")
 						end
 				CastSpell(HK_R, rPos --[[rTarget]], R.Range, R.Delay*1000)--Si el enemigo se mueve falla la R en Root. Set no Pred
-			--PrintChat("Debug:Combo Smart R CAST") --Test
+			--PrintChat("") --Test
 			--end
 			--end
 			end
@@ -439,7 +439,7 @@ end
 		  CastSpell(HK_R, qPos, Q.Range)
 				--Control.CastSpell(HK_Q, qPos)
 			if Menu.Misc.Debug:Value() then
-				PrintChat("DEBUG : Trap Casted")
+				PrintChat("")
 		end
 		end
 		end
@@ -457,7 +457,7 @@ end
           CastSpell(HK_Q ,qPos ,Q.Range , Q.Delay*1000)
 				--Control.CastSpell(HK_Q, qPos)
 				if Menu.Misc.Debug:Value() then
-				PrintChat("Steal Q Casted")
+				PrintChat("")
 				end
 		end
 		end
@@ -467,7 +467,7 @@ end
 			if eTarget then
 				local ePos = eTarget:GetPrediction(E.Speed, E.Delay)
 				CastSpell(HK_E, ePos, E.Range, E.Delay*1000)
-				--PrintChat("Combo E Casted")
+				--PrintChat("")
 			end
 		end
 
@@ -513,7 +513,7 @@ if isReady(_Q) and Menu.AutoEvent.AutoQ:Value()  then
           CastSpell(HK_Q ,aqPos ,Q.Range , Q.Delay*1000)
 				--Control.CastSpell(HK_Q, qPos)
 				if Menu.Misc.Debug:Value() then
-                PrintChat("AUTO Smart Q")
+                PrintChat("")
 			end
 		end
 		end
@@ -524,7 +524,7 @@ if isReady(_Q) and Menu.AutoEvent.AutoQ:Value()  then
 			local arTarget = STarget(R.Range * Menu.Misc.MaxRange:Value())
 			if arTarget and (IsImmobileTarget(arTarget) or IsFearOrCharm(arTarget)) then
 			if Menu.Misc.Debug:Value() then
-			PrintChat("Posible R on Immobile Enemy (But wont die so Aborted)")
+			PrintChat("")
 			end
 				local arPos = arTarget:GetPrediction(R.Speed, R.Delay)
 local hp = arTarget.health + arTarget.shieldAP
@@ -536,11 +536,11 @@ end
 --print(dmg)
 						if hp < dmg2 then
 						if Menu.Misc.Debug:Value() then
-						PrintChat("Debug: Auto R on Killeable Immobile Enemy")
+						PrintChat("")
 						end
 				CastSpell(HK_R, arPos, R.Range, R.Delay*1000)--Si el enemigo se mueve falla la R en Root. Set no Pred
 				if Menu.Misc.Debug:Value() then
---PrintChat("Debug: Auto R")
+--PrintChat("")
 end
 			--end
 			end
@@ -553,7 +553,7 @@ end
 			local arTarget = STarget(R.Range * Menu.Misc.MaxRange:Value())
 			if arTarget then
 			if Menu.Misc.Debug:Value() then
-			PrintChat("Posible R on Immobile Enemy (But wont die so Aborted)")
+			PrintChat("")
 			end
 				local arPos = arTarget:GetPrediction(R.Speed, R.Delay)
 local hp = arTarget.health + arTarget.shieldAP
@@ -565,11 +565,11 @@ end
 --print(dmg)
 						if hp < dmg2 then
 						if Menu.Misc.Debug:Value() then
-						PrintChat("Debug: Auto R on Killeable Immobile Enemy")
+						PrintChat("")
 						end
 				CastSpell(HK_R, arPos, R.Range, R.Delay*1000)--Si el enemigo se mueve falla la R en Root. Set no Pred
 				if Menu.Misc.Debug:Value() then
---PrintChat("Debug: Auto R")
+--PrintChat("")
 end
 			--end
 			end
@@ -586,7 +586,7 @@ end)--END OnUptade TICK
 
 -- OnLoad
 Callback.Add('Load',function()
-	PrintChat("Smart Lux - Loaded")
+	PrintChat("")
 end)
 
 -- OnDraw ADJUSTABLE by Scale MISC to prevent MAX RANGE PROBLEMS and Complains :D
