@@ -100,9 +100,9 @@ function MasterYi:Menu()
 	Legendary.Combo:MenuElement({id = "Q", name = "[Q] Alpha Strike", value = true, leftIcon = Icon.Q})
 	Legendary.Combo:MenuElement({id = "W", name = "[W] Meditate", value = true, leftIcon = Icon.W})
 	Legendary.Combo:MenuElement({id = "E", name = "[E] Wuju Style", value = true, leftIcon = Icon.E})
-	Legendary.Combo:MenuElement({id = "R", name = "[R] Highlander", value = true, leftIcon = Icon.R})
+	Legendary.Combo:MenuElement({id = "R", name = "[R] Highlander", value = false, leftIcon = Icon.R})
 	-- Clear --
-	Legendary.Clear:MenuElement({id = "Q", name = "[Q] Alpha Strike", value = true, leftIcon = Icon.Q})
+	Legendary.Clear:MenuElement({id = "Q", name = "[Q] Alpha Strike", value = false, leftIcon = Icon.Q})
 	Legendary.Clear:MenuElement({id = "Mana", name = "Min Mana to [Q] Clear (%)", value = 40, min = 0, max = 100})
 	-- Harass --
 	Legendary.Harass:MenuElement({id = "Q", name = "[Q] Alpha Strike", value = true, leftIcon = Icon.Q})
@@ -112,10 +112,10 @@ function MasterYi:Menu()
 	-- Killsteal -- 
 	Legendary.Killsteal:MenuElement({id = "Q", name = "[Q] Alpha Strike", value = true, leftIcon = Icon.Q})
 	-- Drawings --
-	Legendary.Drawing:MenuElement({id = "DrawQ", name = "Draw [Q] Range", value = true, leftIcon = Icon.Q})
+	Legendary.Drawing:MenuElement({id = "DrawQ", name = "Draw [Q] Range", value = false, leftIcon = Icon.Q})
 	Legendary.Drawing:MenuElement({id = "ColorQ", name = "Color", color = Draw.Color(255, 0, 0, 255)})
-	Legendary.Drawing:MenuElement({id = "DrawClear", name = "Draw Spell (Clear) Status", value = true})
-	Legendary.Drawing:MenuElement({id = "DrawHarass", name = "Draw Spell (Harass) Status", value = true})
+	Legendary.Drawing:MenuElement({id = "DrawClear", name = "Draw Spell (Clear) Status", value = false})
+	Legendary.Drawing:MenuElement({id = "DrawHarass", name = "Draw Spell (Harass) Status", value = false})
 end
 
 function MasterYi:Tick()
