@@ -84,21 +84,21 @@ Menu.Combo:MenuElement({id = "UseE", name = "Use E", value = true})
 Menu.Combo:MenuElement({id = "UseEMana", name = "E Mana min", value = 40, min = 0, max = 100, step = 5})
 Menu.Combo:MenuElement({id = "UseR", name = "Force R", key = string.byte("T")})
 --Harass
-Menu.Harass:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
+Menu.Harass:MenuElement({id = "UseQ", name = "Use Q", value = false})
 Menu.Harass:MenuElement({id = "UseQMana", name = "Q Mana min", value = 40, min = 0, max = 100, step = 5})
-Menu.Harass:MenuElement({id = "UseW", name = "Use W", value = true, leftIcon = WIcon})
+Menu.Harass:MenuElement({id = "UseW", name = "Use W", value = false})
 Menu.Harass:MenuElement({id = "UseWMana", name = "W Mana min", value = 40, min = 0, max = 100, step = 5})
 --Harass
-Menu.Laneclear:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
+Menu.Laneclear:MenuElement({id = "UseQ", name = "Use Q", value = false})
 Menu.Laneclear:MenuElement({id = "UseQMana", name = "Q Mana min", value = 40, min = 0, max = 100, step = 5})
-Menu.Laneclear:MenuElement({id = "UseW", name = "Use W", value = true, leftIcon = WIcon})
+Menu.Laneclear:MenuElement({id = "UseW", name = "Use W", value = false})
 Menu.Laneclear:MenuElement({id = "UseWMana", name = "W Mana min", value = 40, min = 0, max = 100, step = 5})
-Menu.Laneclear:MenuElement({id = "UseE", name = "Use E", value = true, leftIcon = EIcon})
+Menu.Laneclear:MenuElement({id = "UseE", name = "Use E", value = false})
 Menu.Laneclear:MenuElement({id = "UseEMana", name = "E Mana min", value = 40, min = 0, max = 100, step = 5})
 --Lashit
-Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = true, leftIcon = QIcon})
+Menu.Lasthit:MenuElement({id = "UseQ", name = "Use Q", value = true})
 Menu.Lasthit:MenuElement({id = "UseQMana", name = "Q Mana min", value = 40, min = 0, max = 100, step = 5})
-Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true, leftIcon = WIcon})
+Menu.Lasthit:MenuElement({id = "UseW", name = "Use W", value = true})
 Menu.Lasthit:MenuElement({id = "UseWMana", name = "W Mana min", value = 40, min = 0, max = 100, step = 5})
 
 --Drawings
