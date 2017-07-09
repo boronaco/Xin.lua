@@ -1,4 +1,4 @@
-local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true}
+local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = false, Karma = true}
 
 if not myHeroes[myHero.charName] then return end
 
@@ -307,7 +307,7 @@ function Morgana:__init()
 end
 
 function Morgana:LoadMenu()
-	self.Menu = MenuElement( {id =  "SB"..myHero.charName, name = "Morgana - The Fallen Angel", type = MENU})
+	self.Menu = MenuElement( {id =  "SB"..myHero.charName, name = "Morgana", type = MENU})
 	self.Menu:MenuElement({id = "Key", name = "> Key Settings", type = MENU})
 	self.Menu.Key:MenuElement({id = "Combo",name = "Combo", key = 32})
 	self.Menu.Key:MenuElement({id = "Harass",name = "Harass", key = string.byte("C")})
@@ -315,12 +315,12 @@ function Morgana:LoadMenu()
 	
 	self.Menu:MenuElement({type = MENU, id = "Qset", name = "> Q Settings"})
 	self.Menu.Qset:MenuElement({id = "Combo",name = "Use in Combo", value = true })
-	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = true})
+	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 	self.Menu.Qset:MenuElement({id = "Immobile",name = "Auto on Immobile",value = true})
 
 	self.Menu:MenuElement({type = MENU, id = "Wset", name = "> W Settings"})
 	self.Menu.Wset:MenuElement({id = "Combo", name = "Use in Combo",value = true})
-	self.Menu.Wset:MenuElement({ id = "Harass", name = "Use in Harass",value = true})
+	self.Menu.Wset:MenuElement({ id = "Harass", name = "Use in Harass",value = false})
 	self.Menu.Wset:MenuElement({ id = "Immobile",name = "Auto on Immobile",value = true})
 	
 	self.Menu:MenuElement({id = "Eset", name = "> E Settings", type = MENU})
@@ -328,16 +328,16 @@ function Morgana:LoadMenu()
 	
 	
 	self.Menu:MenuElement({id = "Rset", name = "> R Settings",type = MENU})
-	self.Menu.Rset:MenuElement({id = "AutoR",name ="AutoR", value = true})
-	self.Menu.Rset:MenuElement({id = "Min", name = "x Enemies Around", value =  2, min = 1, max = 5, step =1})
+	self.Menu.Rset:MenuElement({id = "AutoR",name ="AutoR", value = false})
+	self.Menu.Rset:MenuElement({id = "Min", name = "x Enemies Around", value =  4, min = 1, max = 5, step =1})
 	
 	self.Menu:MenuElement({type = MENU, id = "Draw",name = "> Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
-	self.Menu.Draw:MenuElement({id = "Root",name = "Draw Root Time", value = true})
+	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = false})
+	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = false})
+	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = false})
+	self.Menu.Draw:MenuElement({id = "Root",name = "Draw Root Time", value = false})
 	
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	PrintChat("")
 
 end
 
@@ -563,7 +563,7 @@ function Janna:__init()
 end
 
 function Janna:LoadMenu()
-	self.Menu = MenuElement( {id =  "SB"..myHero.charName, name = "Victorious Janna", type = MENU})
+	self.Menu = MenuElement( {id =  "SB"..myHero.charName, name = "Janna", type = MENU})
 	self.Menu:MenuElement({id = "Key", name = "> Key Settings", type = MENU})
 	self.Menu.Key:MenuElement({id = "Combo",name = "Combo", key = 32})
 	self.Menu.Key:MenuElement({id = "Harass",name = "Harass", key = string.byte("C")})
@@ -571,12 +571,12 @@ function Janna:LoadMenu()
 	
 	self.Menu:MenuElement({type = MENU, id = "Qset", name = "> Q Settings"})
 	self.Menu.Qset:MenuElement({id = "Combo",name = "Use in Combo", value = true })
-	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = true})
+	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 	self.Menu.Qset:MenuElement({id = "Interrupt",name = "Auto on Interrupt Spells",value = true})
 
 	self.Menu:MenuElement({type = MENU, id = "Wset", name = "> W Settings"})
 	self.Menu.Wset:MenuElement({id = "Combo", name = "Use in Combo",value = true})
-	self.Menu.Wset:MenuElement({ id = "Harass", name = "Use in Harass",value = true})
+	self.Menu.Wset:MenuElement({ id = "Harass", name = "Use in Harass",value = false})
 	
 	
 	self.Menu:MenuElement({id = "Eset", name = "> E Settings", type = MENU})
@@ -587,16 +587,16 @@ function Janna:LoadMenu()
 	self.Menu.Eset:MenuElement({id = "Attack", name = "Use Against Attacks",value = true})
 	
 	self.Menu:MenuElement({id = "Rset", name = "> R Settings",type = MENU})
-	self.Menu.Rset:MenuElement({id = "AutoR",name ="AutoR", value = true})
+	self.Menu.Rset:MenuElement({id = "AutoR",name ="AutoR", value = false})
 	self.Menu.Rset:MenuElement({id = "HP", name = "Active if HP below (%)", value =  30, min = 0, max = 100, step =1})
 	
 	self.Menu:MenuElement({type = MENU, id = "Draw",name = "> Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
+	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = false})
+	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = false})
+	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = false})
 	--self.Menu.Draw:MenuElement({id = "Root",name = "Draw Root Time", value = true})
 	
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	PrintChat("")
 
 end
 
@@ -841,32 +841,32 @@ function Nami:LoadMenu()
 
 	self.Menu:MenuElement({type = MENU, id = "Qset", name = "> Q Settings"})
 	self.Menu.Qset:MenuElement({id = "Combo",name = "Use in Combo", value = true })
-	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = true})
+	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 	self.Menu.Qset:MenuElement({id = "Immobile",name = "Auto on Immobile",value = true})
 	self.Menu.Qset:MenuElement({id = "Interrupt",name = "Auto Interrupt Spells",value = true})
 
 	self.Menu:MenuElement({type = MENU, id = "Eset", name = "> E Settings"})
 	self.Menu.Eset:MenuElement({id = "Combo", name = "Use in Combo",value = true})
-	self.Menu.Eset:MenuElement({ id = "Harass", name = "Use in Harass",value = true})
+	self.Menu.Eset:MenuElement({ id = "Harass", name = "Use in Harass",value = false})
 	
 	self.Menu:MenuElement({id = "Wset", name = "> W Settings", type = MENU})
 	self.Menu.Wset:MenuElement({id = "AutoW", name = "Enable Auto Health",value = true})
 	self.Menu.Wset:MenuElement({id = "Me", name = "Heal me",value = true})
 	self.Menu.Wset:MenuElement({id = "MyHp", name = "Heal me if HP Percent below ",value = 50, min = 0, max = 100,step = 1})
 	self.Menu.Wset:MenuElement({id = "Ally", name = "Heal Allies",value = true})
-	self.Menu.Wset:MenuElement({id = "AllyHp", name = "Heal Allies if HP Percent below ",value = 80, min = 0, max = 100,step = 1})
+	self.Menu.Wset:MenuElement({id = "AllyHp", name = "Heal Allies if HP Percent below ",value = 40, min = 0, max = 100,step = 1})
 	
 	self.Menu:MenuElement({id = "Rset", name = "> R Settings",type = MENU})
-	self.Menu.Rset:MenuElement({id = "AimR",name = "R-Cast Assistant Key", key = string.byte("T")})
-	self.Menu.Rset:MenuElement({id = "Interrupt",name ="Auto Interrupt Spells", value = true})
+	self.Menu.Rset:MenuElement({id = "AimR",name = "R-Cast Assistant Key", key = string.byte("+")})
+	self.Menu.Rset:MenuElement({id = "Interrupt",name ="Auto Interrupt Spells", value = false})
 	self.Menu.Rset:MenuElement({id = "Min", name = "Active if Hits X Enemies", value =  3, min = 1, max = 5, step =1})
 	
 	self.Menu:MenuElement({type = MENU, id = "Draw",name = "> Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
-	self.Menu.Draw:MenuElement({id = "R", name = "Draw R Range", value = true})
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = false})
+	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = false})
+	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = false})
+	self.Menu.Draw:MenuElement({id = "R", name = "Draw R Range", value = false})
+	PrintChat("")
 end
 
 function Nami:LoadData()
@@ -1541,20 +1541,20 @@ end
 
 
 function Karma:LoadMenu()
-	self.Menu = MenuElement( {id = "SB"..myHero.charName, name = "Karma - Trust Your Spirit", type = MENU, leftIcon = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Karma.png"})
+	self.Menu = MenuElement( {id = "SB"..myHero.charName, name = "Karma", type = MENU})
 	self.Menu:MenuElement({id = "Key", name = "> Key Settings", type = MENU})
 	self.Menu.Key:MenuElement({id = "Combo",name = "Combo", key = 32})
 	self.Menu.Key:MenuElement({id = "Harass",name = "Harass", key = string.byte("C")})
 
 	self.Menu:MenuElement({type = MENU, id = "Qset", name = "> Q Settings"})
 	self.Menu.Qset:MenuElement({id = "Combo",name = "Use in Combo", value = true })
-	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = true})
+	self.Menu.Qset:MenuElement({id = "Harass", name = "Use in Harass", value = false})
 
 	self.Menu:MenuElement({type = MENU, id = "Eset", name = "> E Settings"})
 	self.Menu.Eset:MenuElement({id = "Combo", name = "Use in Combo",value = true})
-	self.Menu.Eset:MenuElement({id = "HPShield",name = "Use if my HP is lower than",value = 30, min = 1, max = 100,step = 1})
+	self.Menu.Eset:MenuElement({id = "HPShield",name = "Use if my HP is lower than",value = 50, min = 1, max = 100,step = 1})
 	
-	self.Menu.Eset:MenuElement({id = "AutoShield",name = "Auto Shield x Allies",value = 3, min = 1, max = 5,step = 1})
+	self.Menu.Eset:MenuElement({id = "AutoShield",name = "Auto Shield x Allies",value = 4, min = 1, max = 5,step = 1})
 	
 	
 	self.Menu:MenuElement({id = "Wset", name = "> W Settings", type = MENU})
@@ -1566,10 +1566,10 @@ function Karma:LoadMenu()
 	
 	
 	self.Menu:MenuElement({type = MENU, id = "Draw",name = "> Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = false})
+	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = false})
+	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = false})
+	PrintChat("")
 end
 
 function Karma:LoadData()
