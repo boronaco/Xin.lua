@@ -201,7 +201,7 @@ function KhazixUnchained:Draw()
         end
     end
     local offOn
-    if (self.Menu.Combo.Assassinate:Value()) then offOn = "On" else offOn = "Off" end
+    if (self.Menu.Combo.Assassinate:Value()) then offOn = "" else offOn = "" end
     Draw.Text("" .. offOn, myHero.pos:To2D() )
 end
 
