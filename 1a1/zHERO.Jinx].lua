@@ -1,7 +1,7 @@
 
 if myHero.charName ~= "Jinx" then return end
 
-print("Welcome to Jackie's Jinx")
+print("")
 
 
 
