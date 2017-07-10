@@ -1,5 +1,5 @@
 local supportedChamps = {
-["Ashe"] = 0,["Caitlyn"] = 0,["Corki"] = 1,["Draven"] = 0,["Ezreal"] = 0,["Graves"] = 0,["Jinx"] = 0,["Kalista"] = 0,["Kennen"] = 0,["Kindred"] = 0,["KogMaw"] = 0,["Lucian"] = 0,["MissFortune"] = 0,["Quinn"] = 0,["Sivir"] = 1,["Tristana"] = 0,["Twitch"] = 0,["Urgot"] = 0,["Varus"] = 0,["Vayne"] = 0,["Jhin"] = 0,
+["Ashe"] = 0,["Caitlyn"] = 0,["Corki"] = 1,["Draven"] = 0,["Ezreal"] = 0,["Graves"] = 0,["Jinx"] = 0,["Kalista"] = 0,["Kennen"] = 0,["Kindred"] = 0,["KogMaw"] = 0,["Lucian"] = 0,["MissFortune"] = 0,["Quinn"] = 0,["Sivir"] = 1,["Tristana"] = 0,["Twitch"] = 0,["Urgot"] = 0,["Varus"] = 0,["Vayne"] = 1,["Jhin"] = 0,
 }
 if supportedChamps[myHero.charName] ~= 1 then return end
 
