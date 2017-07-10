@@ -1,5 +1,5 @@
-local SeChamps = {"Brand", "Ryze"}
-if not table.contains(SeChamps, myHero.charName) then print("" ..myHero.charName.. " Is Not Supported!") return end
+local SeChamps = {"Ryze"}
+if not table.contains(SeChamps, myHero.charName) then print("") return end
 
 local SeSeries = MenuElement({type = MENU, id = "SeSeries", name = "SeSeries | "..myHero.charName})
 SeSeries:MenuElement({type = MENU, id = "Combo", name = "Combo Settings"})
@@ -150,7 +150,7 @@ require("DamageLib")
 class "Brand"
 
 function Brand:__init()
-	print("SeSeries | Brand Loaded")
+	print("")
 	self.Spells = {
 		Q = {range = 1050, delay = 0.25, speed = 1550,  width = 75},
 		W = {range = 900, delay = 0.25, speed = math.huge,  width = 187},
@@ -350,7 +350,7 @@ end
 class "Ryze"
 
 function Ryze:__init()
-	print("SeSeries | Ryze Loaded")
+	print("")
 	self.Spells = {
 		Q = {range = 1000, delay = 0.25, speed = 1700,  width = 55},
 		W = {range = 615, delay = 0.25, speed = math.huge},
@@ -365,7 +365,7 @@ function Ryze:Menu()
 	SeSeries.Combo:MenuElement({id = "Q", name = "Use Q", value = true})
 	SeSeries.Combo:MenuElement({id = "W", name = "Use W", value = true})
 	SeSeries.Combo:MenuElement({id = "E", name = "Use E", value = true})
-	SeSeries.Combo:MenuElement({id = "Survive", name = "Use Survive Combo", value = true})
+	SeSeries.Combo:MenuElement({id = "Survive", name = "Use Survive Combo", value = false})
 	SeSeries.Combo:MenuElement({id = "Health", name = "Min. Health to active Survive Combo", value = 40, min = 0, max = 100, step = 1})
 
 	SeSeries.Harass:MenuElement({id = "Q", name = "Use Q", value = true})
@@ -376,13 +376,13 @@ function Ryze:Menu()
 	SeSeries.Ks:MenuElement({id = "Q", name = "Use Q", value = true})
 	SeSeries.Ks:MenuElement({id = "W", name = "Use W", value = true})
 	SeSeries.Ks:MenuElement({id = "E", name = "Use E", value = true})
-	SeSeries.Ks:MenuElement({id = "R", name = "Use R", value = true})
+	SeSeries.Ks:MenuElement({id = "R", name = "Use R", value = false})
 
-	SeSeries.Draw:MenuElement({id = "Q", name = "Draw Q", value = true})
-	SeSeries.Draw:MenuElement({id = "W", name = "Draw W", value = true})
-	SeSeries.Draw:MenuElement({id = "E", name = "Draw E", value = true})
-	SeSeries.Draw:MenuElement({id = "R", name = "Draw R", value = true})
-	SeSeries.Draw:MenuElement({id = "Disabled", name = "Disable All", value = false})
+	SeSeries.Draw:MenuElement({id = "Q", name = "Draw Q", value = false})
+	SeSeries.Draw:MenuElement({id = "W", name = "Draw W", value = false})
+	SeSeries.Draw:MenuElement({id = "E", name = "Draw E", value = false})
+	SeSeries.Draw:MenuElement({id = "R", name = "Draw R", value = false})
+	SeSeries.Draw:MenuElement({id = "Disabled", name = "Disable All", value = true})
 end
 
 function Ryze:Tick()
@@ -508,4 +508,4 @@ function Ryze:Draw()
 	end
 end
 
-if _G[myHero.charName]() then print("Thanks " ..myHero.name.. " for using SeSeries, remember post your suggestions and feedback.") end
+if _G[myHero.charName]() then print("") end
