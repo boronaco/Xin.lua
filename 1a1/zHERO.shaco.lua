@@ -12,13 +12,13 @@ local shacoObj
 
 local menuIcon = "http://i.imgur.com/M6jflXG.png"
 
-local PMenuFS = MenuElement({type = MENU, id = "PMenuFS", name = "F**k you Shaco | Beta", leftIcon = menuIcon})
+local PMenuFS = MenuElement({type = MENU, id = "PMenuFS", name = "Shaco"})
 PMenuFS:MenuElement({id = "Enabled", name = "Enabled", value = true})
 
 PMenuFS:MenuElement({type = MENU, id = "Drawing", name = "Drawing"})
-PMenuFS.Drawing:MenuElement({id = "Enemy", name = "Draw Enemy Shaco", value = true, tooltip = "Draw for Enemy Shaco(s)"})
-PMenuFS.Drawing:MenuElement({id = "Friendly", name = "Draw Friend Shaco", value = false, tooltip = "Draw for Friendy Shaco(s)"})
-PMenuFS.Drawing:MenuElement({id = "Always", name = "Always Draw", value = false, tooltip = "Always draw the Shaco (true) \nOR only draw during Shaco Ult (flase)"})
+PMenuFS.Drawing:MenuElement({id = "Enemy", name = "Draw Enemy Shaco", value = false, tooltip = ""})
+PMenuFS.Drawing:MenuElement({id = "Friendly", name = "Draw Friend Shaco", value = false, tooltip = ""})
+PMenuFS.Drawing:MenuElement({id = "Always", name = "Always Draw", value = false, tooltip = ""})
 --PMenuFS.Drawing:MenuElement({id = "Shape", name = "Draw Style", value = 1, drop = {"Box", "Circle"}, tooltip = "The Shape Drawn Over Shaco"})
 
 function OnLoad()
@@ -34,14 +34,14 @@ function OnLoad()
 	end
 	if shacoEnabled then
 		if Game.Hero(shacoHero).isEnemy then
-			print(scrNameVar.." | Enemy Shaco Found")
+			print("")
 		else
-			print(scrNameVar.." | Friend Shaco Found")
+			print("")
 			--print("Friendly Mode Enabled")
 			friendlyMode = true;
 		end
 	else
-		print(scrNameVar.." | No Shaco")
+		print("")
 	end 
 end
 
