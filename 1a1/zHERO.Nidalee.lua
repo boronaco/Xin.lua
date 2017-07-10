@@ -1,112 +1,3 @@
---                                        
---                                                                                                                                                    
---                                                                                                                                                    
---              s                                                ;777r,  ;L                                                                           
---              s.                                           rH@B@B@@@B@B@B@B,                                                                        
---              6 ;                                        X@@@d0OZEbB@B@b@B@@@#BUD.                                                                  
---             :d  r                                     x@@#D#8bB8HZEd@88g@B@B@@BB@8                                                                 
---             iE   7                                  .@@0UgP0gPPDB8gP0B8#0@B0bHB@8@B@   .                                                           
---             F2    c                                E@DP#888dDHHPg8@000BB0B@0bHD@dB@@@   . ...                                                      
---             XC    .i                         ...  B@B@B@B@@BbBB@B0d@600@d#B66D#@68@@B:     .   ...                                                 
---             0T;    ,L                    ....    #@B@@DEPg0g6D8B@B@PB0P#b#@XDX@Bg8@B@r      .     ...                                              
---            ;Xrr     :s                .. .       @BBEPg60#b@B@@@B@B@8DO##@b66@BHX@B8B#             . ...                                           
---            cE,L      ,x            .... . .     r@DE06#8@@Bb#HDd#Hb8@B@B@@@B@B8OBBB8@B@b;               ...                                        
---            Xx c       :s         ... . .       xB800dBBBDHP0P0g0gPgBB@B@B@B@B@@@B@8@B@8@BB     .   .   . . ..                                      
---            #c r        ;c     ... . . . .     DBbdH8@#Hg0PHd88B8BB@@@@@@@B@B@B@B@B@B@8@B#B@             .    ..                                    
---            @r r;        ;7   ,.. . . . .     #B8H#BBH6gDB@B@@@B@BB#Dd#b@B@@B8BB@@@B@B@bDH8B@,        .         ..                                  
---            B: ;c         rU   . . . . .     OBbH8@bP60@B@@@@@b#HDdBB@B@B@BBDb#BB@@@B@BB8@B@@@       . .   .     . .                                
---           r@  .Z          5C   . . . . .   2BbH8B#00#@B@@@B86DdbB@B@8#g6d88B#8BB8@B@B@B@dHb@B.       .   .     .   ..                              
---           XO   X           ET   . ... .   rB@HbB#00@@B@B@8dDbb@B@B8XD8@B@B@B#H8#BB@B@0#B@Bb@@;  . .                 ...                            
---           BL   g.           6r   ... ..  rB@688#66B@8@@8#b#8B@B@Bbd@B@@@8Bb#H@@@B@B@B@##d@B@@:                   .     .                           
---           @;   sr            2: ... ..  ;B@dbB#6dB@8@BbbBbBB@B@88B@B@88bB#8B@B@B@B@@@B@B@8#@@     .   .   . .   .       .                          
---          ,@.   ;t            ;B;   ..  cB@D88#0HB@B@BBB8bBB@B@8@B@B8b8b8#@B@B@B@B@B@8#B@B@BBBr                 . . .     .                         
---          rH   72#x5ZOg#HHg6Ux#8. .:.  FB@Db#DP#B@B@BBBB8BB@B@@@B@#88B##b@B@@crxEdB@B@BBb@#@B@Br;:                 . .     ..                       
---          j5 T0FCx#LiLiTjrrcrEg  ..  ;@B8db#808B@B@B@B8bB@@@@@@@B8B#bDbB@@@E.   .:7n@B@B@bBD@B@B.;cr:                     . ..                      
---          s@DCirrsL6irrrr;rrDO     :B@B#Db88H@B@B@B@B8bBB@B@BB#B8@8##@B@B8r   ..:;r5x@B@B88@d@B@g .:rir;         .   . . .   ..                     
---            c0#Z5riTHi;:;;rDS    ;@B@db#@8#d@BBB@B@B8b@B@B@@8b88B#8B@B@Bts.   ..,;rsxU@B@BbB8B@B@ ,;,.,..,;:,   . .     . .    .                    
---              :g@@ZicBUFE22r   CB@BDd8B@86#@B@B@@@BB8@B@@@8B8B88B@B@B@@;;Hr  . ..:;r7CB@@@#@BB@@B  r;,;;:;;;;;.  .     .       ..                   
---                 rP8PFLr#@8 :B@B@H#8@BB0DB@8@B@8@BBb@@@@8b88BB@B@@@@@C  5;F:       ;cT#B@B8B@B@B@; ;c  .;rr:;;;.      .   .   . ..                  
---             .     gH::;c#B@B@B88@B@800B@BB@BO2@B@B@@@BBbBB@B@B@B@B8r   2F6r    :nB@8DD@B@8@B@@8B;,ijj,  ;.,  ;r     .       . . .                  
---             ..    ,@CSZ@B@@@@@@@@800b@B8@@B,2@B@B@B@B@@@B@@@B@@@g#B@B5  T; .6@B@BnS#B8B@8@B@@@b@   :r5;;ir... ;;   .             .                 
---            .       B8F60x:nBBFsU@H8BBDB@@P #@@@B@B@B@@@B@B@B@8@B@@@B@B#r. rB@B@@@@@BDO@BBB@@@8@@ ..  ;7  :r:. .r.               . .                
---           .     .:r@       X    X@8#dBB@2 B@B@B@@@B@B@B@B@@@@20@B@L;jn2F. FnsO;ncZ@OrUB@BB8@BBBZ ,;:  ;i   ,;,.r;      . . .   . . .               
---           .   ;c;, 0, .rX6XbiTSiSB0d@@@F B@88B@@@8@B@@@B@B@B@0UnCcr:.,;i  T;.,;;r7;;s0@B@#DB@B@ r; i;  ;L.   ;;r;     .            .               
---          . .  Fr   c@@B@B@B@B@B@B@0@@@B @@B##@B@BD@@B@B@B@B@@s:      ,;T:;cr.       rHB@B@D@B@  :s ;rr:,,;;.  ;;   . . . .   .     ..              
---          ..   rd jE6@B@B@B@B@B@B@B@b@@ U@B#DbB@@@b8B@B@B@B@B@L,      ;tc;;LX;   .. .rx@B@B@B@O   :Tr..r..,;;:     .       .   . . . .              
---                @@@B@B8Lc;:. dT . ZBB@H;@@Dd#@@BBBB#@B@B@B@B@@8B@t7;;.5Bd;xB@r  ;7nPU;B@@B@B@B@c   .5, ;r.   ,:         .   .   .     .             
---         . .   rB@B@B@g  .,. CP.;,:@B@sBB@@0X@BHB@B@@@b@B@B@B@B@BOCsr:.7sD0Fr.,;7sO8OEB@B@BbBc:8;,  .r,.:i;.  .;.        .   .       ..             
---              rB@B    @;.;;:.;@,:;.n@B0BBB@BBB@B@B8S@@@@@B@BHF@#U0ZrLssjs7cr;;csL50LsBdn@B@BB  rBBi  .r ::;:   .;.      .   .   .     .             
---         .    B@@@  , 0# :;;,:BF ;:.@@B@B@B@B@B@BBB ,6B@B@B#b8s@SFSrc@BBjrLbB@btcnTr@dZ@#@B@BP#g B2    .;:. :.  .:                                  
---        .    i@B@B; ;.;@;.;;;.@BE :,,B@B@B@B@B8#bB@i         j@0@USc;jPi:.;c0Hcrtcc8BB@.    .,  ;B       .r. .. .,. . .           .    .            
---        .    XB@B@r.: 7@B ,;: 8@Bb:. ;B@B8B@B@@@@@B@;;;;:. .: 8#r@0nr:;xXHXnsrricPB8;@,.,  :;rr;Bn         ;:,..,..  .   .   .       . .            
---        .    c@B@B7.: #B@x :: @B@B@5; .B@BBD@B@B@B@B@i;riiTi7,PB@BEb#c: .:,.:rsg@B@BbB;ricci7;78P            .,.:.. .       . . . .    .            
---        .     r@@@;. iBb8@r ,.BPB@B@@D; c@B@B@6@B   ,Bn;.,...cB@B@7r0@PT;::r5#B@gZB@@@Br:::;;UZ;     .                       .       . .            
---        . .     8B. :B@BBB@r :@g@BD@@B@BZc@@@B@Bx .r  c@B6Db@B@B@B5rridB@B@B@BS;rX@B@@DB@B@@@7                      . .   .     . .    .            
---        .      ,cS ,B@B@nC#@:;BjB@D#B#B@B@@@@@B@Z  2B@@@B@B@B@B@d@Cici;rLnsc;:;rTD@: 5   rr;             .   . .   .     .           . .            
---        . .   ;;H ,B@B@B2TL8@X@s#@8#8BbDBB@@@B@B@.   .;ri;xB@Bd UBjcLiir;;;;;;ri56@BL.                      .   . .   . .   .   .     ..            
---        ..   :;6nZBT@@B@8x6O8@8rs@P8dD8#d8B@B@B@B@#6E5rr:7U5;  HB6TrLi;;;;;;rccTt06@B@B@#Zir..r0DEFnr.       .   . .   .   .       . . .            
---        . . .,:##s   b@B@HO5sb806BBD88@B@B@B@B@B@@@B@B@B@B@BB#@t##srrrr;;;;;rT5rr0#BbXSx0B@B@B@8#gS5X6gr      .   .       .   .        .            
---        .. .          s@Bx;iTstZj#B@B@B@B8###bb@B@B@B@B@B@8Pt7;rP@B@j;r;;;;;;TT,j@B@B@BBZsLFCLiircssrrc8BT       .       . .     . .   .            
---        .              ,@BF0Fsscrn@b8d#dbD8#B@@B@BBd8#B6Uc;xXO#B@6@B@iStr,,.;TT;PB@B@B@B@#irrrr;;;rir;ridBP   .   .       .           .             
---         .     . . .     @U2sLcss0@B8BBB8B@@B@c;;r;;;;;;rsLPB@B@B@B@B@B@Bs;;rCxB8@Bi;ii5Zdcciirr;r;i;;;sxU@;         .           . .                
---         .      . . .    PZrCED62O@BBB@B@B@BF::,:;rriiTccicrri5Ct7;r@d8B@@@B@B@B@8@BtrciTTsTjTjcciccr;;xFs@@  .                 .   . .             
---         . . . .         r@tgd88P@B@B@B@B@Bc:;;;..:ccTTsL55xLTi7r;r@8UZ6B@@@B@B@B8d@B#SxtCxCsLcTiiijr;rnSCP@                          .             
---          . . . .         @BBs5iC@PB@B@##B#5c;;:;;;iciTcssSCxtCss2@BD8B852@86E@XLP88@B@BXUXOEU2sLTLLr;tSSxxBS     . .                .              
---          .         ;7cFT;s 0    @   .  r@ZHPSi;;rr7iTTL5F5x5Ct58@@@B#Ujrr8@gEBP;ritxFFOxjicjFEE2SLjrc2SSns@B@B@B@@@B@B@B@B#Ex;.     .              
---          .   .     ,;ir,rP s7   Br :.  @BPgPF2si;rrjTsLCx2SnFUxUFFtscccjr7B@OdBri5sstxr;;rrrrr5b#SsLt2CnnCD@8@B@B@B@B@B@B@B@B@B@6T                 
---           .   . .;rrr;:;i# ;@   c8 ;. rB80gEO2sTTrrisLtxZZtcLTtCUF25xt5ccrcd@d@ULsCSS;:;r7LtxLcC@0nFSCF2O5HB#D##8bb#8##DB@@B@B@B@B@@j              
---            . .   .;:,.r, rH@B@#xTB;;; ;@B6gEXO5jTjrj2CSXFc;;::,:;rcxCStCLi;;T8B#sLLs;;isL5FE6BB6P@HUFFSXOC#@#B88bB88b8b@2:;LO#@@B@@@B@8,           
---            .     ;:  ;i. r@UOg#@@B@r.  B@66XPU2jLLss0UPx7;;rrrirr;;;csSCZFjr;;CSCLsricTLUODrZBrB@B@BXUgg02@Bbb8#8#B8B8BBBc.      7U8@B@B@          
---             .    r..;i  c@0P#6ZEX8BX   @B600XUFSxCsSH#2r;ctnx2SnCsTcrij55OE5;rstssTLT55C:.i:;. :   HB@bH0tB@#8#8bB8B8B8BB@B@BU;      .B@B@x        
---              .  ;::jT  Z@#60XFXPXX@BL, x@6DPPOUnUCtxb#rrC#BZxntrSPgXUtsTLCOHUiCxx5CFgOr             Ss0Bi;@B8b8b88B8BBBBB8@B@B@@@s    rBBB@@       
---                .i,.i; B@0OUOXdd0nOUbB@ rBDHd0dXEnF55B@s8B5       ZsLH@BBDOFg#Z5Fn6dO   .               TO;d@#bb8b888bB8B8B8BB@B@B@B@  D@bbB@.      
---                i;  r:c@ZZO0XOZOZ0ZOOHB.:@#86POOOgnZC@B2,              .,iE8BB@HZ#s       ...  ,   ,     @S#BB@@B@88b8bB8B8BBB8BBB8@@@@@BB8@@       
---                i  r; rB@OnFnFPd###gPH@T;BCLLTcrjLCn0BP                     ;P@BO7       cT,: .;,  ;     g@B@B@B@8@BB8B8B8Bb88Bb88B8@B@888@@r       
---               ;.rrs:  ;B@ZXSnZUF08@Z0@T;@riTsxFFZU8r;            .,,          .        ri....,,:,;r.     .nB@S7:@B@B@B@B@88bB8b#88B8B8B8@B         
---              ,.  ;r ... B@t5tFg86:;8X0B8BrrnP#Pg6@U       .  ,;  ,.ni.              ..          ..,L   ,       rB88@B@B@B@BB88b8b8bB888B@@7        
---                   C  r: LB852F@5   d@B;c@Tg##6g#@;        T.:.                                  . ,@@.               .sB@@@8bD8#b#8888BbBB@B       
---                   cr r   P@6S28g   ;@r sBdD#B@B@.   ,    ;;,                      .        ..... ,b@B@,                 d@B8bB#8b8bB88b8#BB@B      
---                   .:ct   ,@BEsdB    @P c@b@Br;           ;...         ..,.,. ..       ..      ..iB@B@B@d                D@@B@B@b8#8##b8#88@B@B     
---              ;     . . .r c@bnS@;   B@T;@D#r           :c:.,,... ....:,:...  ..,::,:::,:,,,;,;rSB@8B8@B@b      i         DxS8@B@@@B@88#8#88@B@B    
---               ;     r   i  B@POBg   Eg@BH           @B0c;:..,.    ... . ..:;;;;;;;rrrrrrrrcjjirU@BB88bbB@B@    L         0;   PB@B@@@B@Bbd88@B@    
---                j:   ,   r  ;B@#@B   ;@B           r@B@Bx;;;;::.,.,,:,;;;;rrr;;;;;;;;::,,...;:;H@B@b8#bD##@Bc  :          @   iB@d@#@@@B@B@d8B@BC   
---                 r;;.:   L  rdBsc@.   Bt          r@BHB@B@5;,,:;;rrr;;;;:;::..            ..,S@@B@B8b##D6#bBis; .;     ;  O  BB@#@@D@@@@B@@@#@B@    
---                  ;..7:  r; : ZB sD   @cc;      : @BHX@B@B@B8sr,,..                     ,cxO8@@B@B@B###6Dd#d@BF         d; r@B@#@B8d@B@BBB@BB@@B    
---                   ., r.       rB:B   UT cnr   t@@BH0EB@B@B@@@B@Xj;:LTF#5          ;O5LHB@B@B@B@B;s@D#d#d#HD#@B         F#B@B@B@B8#@B@B8B@B@B@B     
---                     :.:   7    rBD   rE..;OH:;B@#6X0O@@BB@B@B@B@B@B@B@B@BSr@L s; rB@BbH6EPE6B@8@E#BbdDH#6DHDD@       r @B@B@B@B8#@B@BB#@B@B@B,     
---                           ,,    8Br   @,,,,;6B@#d#DH6B@BBBB8@B@BBb#P6EZUHB@B@Z@B;8@XXZUxC5Od@BUB@B@@dH#dddD6dB@    c@B@B@@@BB#88@B@BB#bB@B@BL      
---                             .    B@   Br.::. ;x@B .@@@B@#D@@B@B@B8#H00XEE0PDd8D@bDP000OOUO0BBOr@B@B@gDddHdHdHDB@B@B@B@@BBBB@B@B@B@B8b8B@B@B@       
---                                  B@   FU.,:,,. :0r  0B@B@tSd@B@B@BBb8dDHDH#D#HH0#H60HP6gPg#B@riP@8@B#6D6DHd6dHdB@@@B@B@B@@@@@B@@@8888B@B@B@        
---                               ;@B@B.  ;B.,:::;,..2H  rB@@@tisFPBB@@B88#b#8##6HPHHDP0XXX6PP#@grc6B@#@B06ddD6d6dH00@B@B@@bD##8#8#8bBB@B@B@BC         
---                             .B@B@8@F   Br.::::::: rB  ,n@B@OcTsjS6@BBb888##60g00DHHOXSSxOX#8LiDB@B8B@XddDHD6d6dd6X@B@B@B@B@B@8@B@B@B@@@T           
---                        ,;ts#@@@B8@B@   0L.,::::;::.;B    @B@EssLcTsP8@88#D66EXnXPDHPZFS22g6Sc0bB#bBBB8g#dDd#d#d#HdOP@@8@B@B@B@B@B@B@@j             
---                  r6B@B@@@B@B@B@B@B@n.  ;Z.::::;::::.tx   ;F#@B#6XUFsCE88#00EEZOUg6#PXnZZgP6c6DH0PrFB@BUd@@@B@6dHb#DX@B@B@B@B@B@B@B@C               
---                @B@B@BDgBB@B@B@8B8@  s   X;.:::::,:,:;E      B@b@8Bbb6O2P66g0EPOOX06#FnngXXOE0dg0ZrrLg@BO:. ,d@B@B@b#B@LEB@B@B@B@Br                 
---              Z@B@n.  r6BBdDdd0Dd8B  S   Sr..,,:,::::;;      BB8D86dD88#00P0EEXEZZUgHPCxx2CnOPP6PZrcciH@B     r@L :@P@#                             
---            ;B@B   iBB@8HgdHDdD#@B@r ,   rH  .,,::;::r;      B@8#bbH#D8#bH6EO2UFUFF2H6Usss5xFn0Pdxrirs@@@B@:       Z@B@ r                           
---           @B@. .@B@B88@@@B@B@B@B@.   r   B;  ,.:;::;r       @B@8@@@88#bDd6HXZ2Fx2CFOdExstsSxUO6HxrrrPd@B@@T        js:                             
---          @Bx  6@BB@@B@B@B@B@B@B@     t   PCrr;:::;;r;       B#cjcSX8B@8#HDH6XEFF5xFOPXCCsCCFSOgDCr;sPHB@#@L                                        
---         .B 5;B@B@B@B@B@@@@@B@B7      :   ,d ;iLcrr;        .@irr7rrrsH@8#HHPPXZSS52UZggCxC2xnZP6CrrOgD@Bb@U                                        
---          U @B@B@B@Bbxr:,                  O                @8rrrrr7irrsd8#0PXXZOFx5UX@#S5xSFFZX6trcPOd8B@@2                                        
---          t@B@@@Br                         L               .BgtCLLi7rrrrrsPb00XEZUS2xZOFtCCF2FnEg5;FOXEDB@B                                         
---         8@B@B@P     ;                     .;           ;  n@B@dHDb6OSt7r;r5Dd0EEUUSCC22nnZFUFOZgjrUZZPd@B                                          
---        B@@@B@7 ,:,;.                       c          i   @B@80OEgdH888PCr;;FdHXXUZnnxnnZUUZOUOXcrOFEX@B    .  , .                                 
---       Z@B@8@B           d@B@B@B@           r        .    ,B@B86OUOXPgd#@8bgsrjP#00XPXXXgZXUOZOUUS2nZO8B     ,   .                                  
---       @@@BB@@          Bg      B@ #        ..     .r     @@@@##6EnOXgE0d##8bdCsZHPHP6E6EgOXOOUUFZnUn#@                                             
---      FBB@@HB@@                 6BLc@        ;            @B@@B##D0OOOXO06dd#D86g060606PgOEXXUUUZnUZ#B                                              
---      B@D@BDg@B@n             Z@BB @B        ;   ;        B@B@B@@B#HEEOXOEEH6dd#Hd06g0E0EPEEZOOXOEZ#B       ;      .                                
---      ,B@B@B#FBB@B@8x:.  ;PB@B@Bt HB@                       rsZ6@B@@@Bb0XUgOgPH6d6606P6P0XPEgXgOXO8@.                                               
---       xB@B@B0CdB@B@B@B@@@B@BDHtt@@@.                              :7ZH@B@880P0H66PHPPEPE0g0EEZXX@B                                                 
---         g@B@B@gX0@B@B@B@B@B#6BB@@@x                                      rT68@B8DdP6P0E0gPXXnOP@Z                                                  
---            B@B@B@###B88B@B@B@B@B@L                                            rx8@@8#P0gPOXUX#@;                                                   
---             .@@@Bbd00HdbbBB@B@B6                                                  ;n#@8d0Hg6@#                                                     
---                P@B@B@B@B@B@BE;                                                       .2UOH@Bn                                                      
---                   .s2Ftj7:                                                              ,rc;                                                       
---                                                                                                                                                    
---                                                                                                                                                    
-
-
-
 if myHero.charName ~= "Nidalee" then return end
 
 
@@ -346,9 +237,9 @@ local function CircleCircleIntersection(c1, c2, r1, r2)
 end
 
 
-local Nidalee = MenuElement({type = MENU, id = "NidaleeTocsin", name = "NidaleeTocsin"})
+local Nidalee = MenuElement({type = MENU, id = "NidaleeTocsin", name = "Nidalee"})
 
-Nidalee:MenuElement({id = "Script", name = "Nidalee by Tocsin", drop = {"v1.04"}, leftIcon = "https://vignette2.wikia.nocookie.net/leagueoflegends/images/4/44/Nidalee_OriginalLoading.jpg"})
+Nidalee:MenuElement({id = "Script", name = "Nidalee by Tocsin", drop = {"v1.04"}})
 Nidalee:MenuElement({name = " ", drop = {"Champion Settings"}})
 Nidalee:MenuElement({type = MENU, id = "C", name = "Combo"})
 Nidalee:MenuElement({type = MENU, id = "H", name = "Harass"})
