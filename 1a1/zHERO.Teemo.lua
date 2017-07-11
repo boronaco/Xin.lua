@@ -18,7 +18,7 @@ function Teemo:__init()
 	self:LoadMenu()
 	Callback.Add("Tick", function() self:Tick() end)
 	Callback.Add("Draw", function() self:Draw() end)
-	PrintChat("One Two Three Fuck")
+	PrintChat("")
 end
 
 function Teemo:LoadSpells()
@@ -40,26 +40,26 @@ local Icons = {
 function Teemo:LoadMenu()
 
 	--Menu
-	self.Menu = MenuElement({type = MENU, id = "Menu", name = "Teemo", leftIcon = Icons["TeemoIcon"]})	
+	self.Menu = MenuElement({type = MENU, id = "Menu", name = "Teemo"})	
 	--Combo
 	self.Menu:MenuElement({type = MENU, id = "Combo", name = "Combo"})
-	self.Menu.Combo:MenuElement({id = "UseQ", name = "Use [Q] Blinding Dart", value = true, leftIcon = Icons.Q})
-	self.Menu.Combo:MenuElement({id = "UseW", name = "Use [W] Move Quick", value = true, leftIcon = Icons.W})
-	self.Menu.Combo:MenuElement({id = "UseR", name = "Use [R] Noxious Trap", value = true, leftIcon = Icons.R})
+	self.Menu.Combo:MenuElement({id = "UseQ", name = "Use [Q] Blinding Dart", value = true})
+	self.Menu.Combo:MenuElement({id = "UseW", name = "Use [W] Move Quick", value = true})
+	self.Menu.Combo:MenuElement({id = "UseR", name = "Use [R] Noxious Trap", value = true})
 	--LaneClear
 	self.Menu:MenuElement({type = MENU, id = "LaneClear", name = "Lane Clear"})
-	self.Menu.LaneClear:MenuElement({id = "UseR", name = "Use [R] Noxious Trap", value = true, leftIcon = Icons.R})
+	self.Menu.LaneClear:MenuElement({id = "UseR", name = "Use [R] Noxious Trap", value = true})
 	self.Menu.LaneClear:MenuElement({id = "RMin", name = "Use [R] when X minions", value = 3,min = 0, max = 7, step = 1})
 	self.Menu.LaneClear:MenuElement({id = "Ammo", name = "Min. [R] charges to keep", value = 2, min = 0, max = 3, step = 1})
 	--HarassMenu
   	self.Menu:MenuElement({type = MENU, id = "Harass", name = "Harass"})
   	self.Menu.Harass:MenuElement({id = "AutoQ", name = "Auto Q Harass", key = string.byte("H"),toggle = true})
-  	self.Menu.Harass:MenuElement({id = "UseQ", name = "[Q] Blinding Dart", value = true, leftIcon = Icons.Q})
+  	self.Menu.Harass:MenuElement({id = "UseQ", name = "[Q] Blinding Dart", value = true})
 	
 	--Drawing
 	self.Menu:MenuElement({type = MENU, id = "Drawing", name = "Drawings"})
-	self.Menu.Drawing:MenuElement({id = "Q", name = "Draw [Q] Range", value = true, leftIcon = Icons.Q})
-	self.Menu.Drawing:MenuElement({id = "R", name = "Draw [R] Range", value = true, leftIcon = Icons.R})
+	self.Menu.Drawing:MenuElement({id = "Q", name = "Draw [Q] Range", value = false})
+	self.Menu.Drawing:MenuElement({id = "R", name = "Draw [R] Range", value = false})
 
 end
 
@@ -132,9 +132,9 @@ function Teemo:Draw()
 	if self.Menu.Drawing.R:Value() then Draw.Circle(myHero.pos, R.Range, 3, Draw.Color(220,255,0,0)) end
 	local textPos = myHero.pos:To2D()
 	if self.Menu.Harass.AutoQ:Value() then
-		Draw.Text("Auto Harass: On", 20, textPos.x - 40, textPos.y + 80, Draw.Color(255, 000, 255, 000)) 
+		Draw.Text("", 20, textPos.x - 40, textPos.y + 80, Draw.Color(255, 000, 255, 000)) 
 	else
-		Draw.Text("Auto Harass: Off", 20, textPos.x - 40, textPos.y + 80, Draw.Color(255, 255, 000, 000)) 
+		Draw.Text("", 20, textPos.x - 40, textPos.y + 80, Draw.Color(255, 255, 000, 000)) 
 	end
 end
 
