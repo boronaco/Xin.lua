@@ -9,13 +9,6 @@ local function GetVersion(name)
 	return tostring(content) or AvVersion
 end
 
-local function Update()
-	DownloadFileAsync("http://www.asyncext.xyz/scripts/AsyncVeigar/AsyncVeigar.lua", COMMON_PATH.."AsyncVeigar.lua", function() end)
-	print("AsyncVeigar - SCRIPT HAS BEEN UPDATED. ||||||||||| PLEASE RESTART. |||||||||||")
-	return
-end
-
-
 --print(GetWebResultAsync("http://www.asyncext.xyz/scripts/AsyncVeigar/AsyncVeigarV.c"))
 
 if not FileExist(COMMON_PATH.."Collision.lua") then
@@ -45,7 +38,7 @@ require("Callbacks")["Load"]({"levelup"})
 local Prior = {} -- todo
 
 local function Main()
-	return myHero.charName == "Veigar" and Veigar() or print("AsyncVeigar -- This script will only work with Veigar. Please unload this script.")
+	return myHero.charName == "Veigar" and Veigar() or print("")
 end
 
 function GetTarget(range)
@@ -727,8 +720,8 @@ function Veigar:__()
 	self.Menu:MenuElement{
 		id = "_QSettings",
 		name = "Q Drawings + Settings",
-		type = MENU,
-		leftIcon = "http://www.serveunited.us/wp-content/uploads/2014/08/Q-Commons.jpeg"
+		type = MENU
+		
 	};
 end
 
@@ -736,8 +729,8 @@ function Veigar:Menu()
 	self.Menu = MenuElement{ -- main
 		name = "Veigar",
 		id = "_Veigar",
-		type = MENU,
-		leftIcon = "http://www.asyncext.xyz/scripts/AsyncVeigar/Veigar_Poro_Icon.png"
+		type = MENU
+		
 	};
 
 	self.Menu:MenuElement{ -- sub [Combo]
@@ -773,8 +766,8 @@ function Veigar:Menu()
 	self.Menu:MenuElement{ -- sub [LevelUp]
 		name = "Skills Level Up",
 		id = "_LevelUP",
-		type = MENU,
-		leftIcon = "https://image.freepik.com/free-icon/double-up-arrow-angles_318-53141.jpg"
+		type = MENU
+		
 	};
 
 	self.Menu._LevelUP:MenuElement{
@@ -807,8 +800,8 @@ function Veigar:Menu()
 			self.Menu:MenuElement{
 				id = "_".._spell.."Settings",
 				name = _spell.." Drawings",
-				type = MENU,
-				leftIcon = iconDrawings[_spell]
+				type = MENU
+				
 			};
 		end
 		if _spell == "Q" then
@@ -1271,7 +1264,7 @@ function Veigar:Draw()
 
 			local x, z = target.pos.x + ux * distance, target.pos.z + uy * distance
 
-			Draw.Circle(x , target.pos.y, z, 75, Draw.Color(255, 184, 62, 74))
+			Draw.Circle(x , target.pos.y, z, 75, Draw.Color(0))
 
 		end
 	end
@@ -1280,7 +1273,7 @@ function Veigar:Draw()
 		local target = GetTarget(self.spell["_E"].range)
 		if not target then return end
 		local pred = GetPred(target, self.spell["_E"].speed, 0.25 + Game.Latency()/1000)
-		Draw.Circle(Vector(pred)-Vector(Vector(pred)-Vector(myHero.pos)):Normalized()*375, 75, Draw.Color(255, 120, 23, 187))
+		Draw.Circle(Vector(pred)-Vector(Vector(pred)-Vector(myHero.pos)):Normalized()*375, 75, Draw.Color(0))
 
 	end
 end
