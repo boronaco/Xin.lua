@@ -1,7 +1,10 @@
 local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true}
+if myHero.charName == "Ashe" or myHero.charName == "Ezreal" or myHero.charName == "Lucian" or myHero.charName == "Caitlyn" or myHero.charName == "Twitch" or myHero.charName == "KogMaw" or myHero.charName == "Kalista" or myHero.charName == "Corki" then
+	
+
 
 if not myHeroes[myHero.charName] then return end
-
+require "2DGeometry"
 require "DamageLib"
 
 class "_AutoInterrupter"
