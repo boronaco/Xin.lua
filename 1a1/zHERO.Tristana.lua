@@ -22,52 +22,52 @@ function Tristana:Menu()
     ["R"] = "http://static.lolskill.net/img/abilities/64/Tristana_R.png"
 }
 
-	self.Config = MenuElement({type = MENU, name = "Tristana", id = "Tristana", leftIcon = Icons["Champion"]})
+	self.Config = MenuElement({type = MENU, name = "Tristana", id = "Tristana"})
 
 	self.Config:MenuElement({type = MENU, name = "Combo Settings", id = "Combo"})
-	self.Config.Combo:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q", leftIcon = Icons["Q"]})
+	self.Config.Combo:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q"})
 	self.Config.Combo.Q:MenuElement({name = "Enabled", id = "Enabled", value = true})
 	self.Config.Combo.Q:MenuElement({name = "Only If Target Has E Debuff", id = "QE", value = false})
-	self.Config.Combo:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E", leftIcon = Icons["E"]})
+	self.Config.Combo:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E"})
 	self.Config.Combo.E:MenuElement({name = "Enabled", id = "Enabled", value = true})
 	self.Config.Combo.E:MenuElement({type = MENU, name = "WhiteList", id = "WhiteList"})
 	for K, Enemy in pairs(Utility:GetEnemyHeroes()) do
-		self.Config.Combo.E.WhiteList:MenuElement({name = Enemy.charName, id = Enemy.charName, value = true, leftIcon = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"..Enemy.charName..".png"})
+		self.Config.Combo.E.WhiteList:MenuElement({name = Enemy.charName, id = Enemy.charName, value = true})
 	end
-	self.Config.Combo:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R", leftIcon = Icons["R"]})
+	self.Config.Combo:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R"})
 	self.Config.Combo.R:MenuElement({name = "Enabled", id = "Enabled", value = true})
 	self.Config.Combo.R:MenuElement({name = "Use E + R Finisher", id = "ER", value = true})
 
 	self.Config:MenuElement({type = MENU, name = "Harass Settings", id = "Harass"})
-	self.Config.Harass:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q", leftIcon = Icons["Q"]})
+	self.Config.Harass:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q"})
 	self.Config.Harass.Q:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Harass.Q:MenuElement({name = "Only If Target Has E Debuff", id = "QE", value = false})
-	self.Config.Harass:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E", leftIcon = Icons["E"]})
+	self.Config.Harass:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E"})
 	self.Config.Harass.E:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Harass.E:MenuElement({type = MENU, name = "WhiteList", id = "WhiteList"})
 	for K, Enemy in pairs(Utility:GetEnemyHeroes()) do
-		self.Config.Harass.E.WhiteList:MenuElement({name = Enemy.charName, id = Enemy.charName, value = false, leftIcon = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"..Enemy.charName..".png"})
+		self.Config.Harass.E.WhiteList:MenuElement({name = Enemy.charName, id = Enemy.charName, value = false})
 	end
 	self.Config.Harass:MenuElement({name = "Mana Manager", id = "Mana", value = 45, min = 0, max = 100, step = 1})
 
 	self.Config:MenuElement({type = MENU, name = "Kill Steal Settings", id = "KillSteal"})
-	self.Config.KillSteal:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R", leftIcon = Icons["R"]})
+	self.Config.KillSteal:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R"})
 	self.Config.KillSteal.R:MenuElement({name = "Enabled", id = "Enabled", value = false})
 
 	self.Config:MenuElement({type = MENU, name = "Draw Settings", id = "Draw"})
-	self.Config.Draw:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q", leftIcon = Icons["Q"]})
+	self.Config.Draw:MenuElement({type = MENU, name = "Rapid Fire (Q)", id = "Q"})
 	self.Config.Draw.Q:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Draw.Q:MenuElement({name = "Color:", id = "Color", color = Draw.Color(255, 255, 255, 255)})
-	self.Config.Draw:MenuElement({type = MENU, name = "Rocket Jump (W)", id = "W", leftIcon = Icons["W"]})
+	self.Config.Draw:MenuElement({type = MENU, name = "Rocket Jump (W)", id = "W"})
 	self.Config.Draw.W:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Draw.W:MenuElement({name = "Color:", id = "Color", color = Draw.Color(255, 255, 255, 255)})
-	self.Config.Draw:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E", leftIcon = Icons["E"]})
+	self.Config.Draw:MenuElement({type = MENU, name = "Explosive Charge (E)", id = "E"})
 	self.Config.Draw.E:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Draw.E:MenuElement({name = "Color:", id = "Color", color = Draw.Color(255, 255, 255, 255)})
-	self.Config.Draw:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R", leftIcon = Icons["R"]})
+	self.Config.Draw:MenuElement({type = MENU, name = "Buster Shot (R)", id = "R"})
 	self.Config.Draw.R:MenuElement({name = "Enabled", id = "Enabled", value = false})
 	self.Config.Draw.R:MenuElement({name = "Color:", id = "Color", color = Draw.Color(255, 255, 255, 255)})
-	self.Config.Draw:MenuElement({name = "Disable All Drawings", id = "Disabled", value = false})
+	self.Config.Draw:MenuElement({name = "Disable All Drawings", id = "Disabled", value = true})
 end
 
 function Tristana:GetTarget(range)
