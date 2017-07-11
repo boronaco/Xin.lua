@@ -192,7 +192,6 @@ end
 local function GetPred(unit, speed, delay)
 	local speed = speed or math.huge
 	local delay = delay or 0.25
-	local unitSpeed = unit.ms
 	if OnWaypoint(unit).speed > unitSpeed then unitSpeed = OnWaypoint(unit).speed end
 	if OnVision(unit).state == false then
 		local unitPos = unit.pos + Vector(unit.pos,unit.posTo):Normalized() * ((GetTickCount() - OnVision(unit).tick)/1000 * unitSpeed)
