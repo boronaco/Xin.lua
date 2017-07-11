@@ -1,4 +1,4 @@
-local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true }
+local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true, Ashe = true}
 
 if myHero.charName == "Ashe" or myHero.charName == "Ezreal" or myHero.charName == "Lucian" or myHero.charName == "Caitlyn" or myHero.charName == "Twitch" or myHero.charName == "KogMaw" or myHero.charName == "Kalista" or myHero.charName == "Corki" then
 	require "2DGeometry"
