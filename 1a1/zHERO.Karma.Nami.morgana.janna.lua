@@ -1,4 +1,4 @@
-local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = false, Karma = true}
+local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true}
 
 if not myHeroes[myHero.charName] then return end
 
@@ -523,7 +523,7 @@ function Morgana:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
@@ -796,7 +796,7 @@ function Janna:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
@@ -1049,7 +1049,7 @@ function Nami:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
@@ -1089,7 +1089,7 @@ end
 
 
 function Soraka:LoadMenu()
-	self.Menu = MenuElement( {id = "SB"..myHero.charName, name = "Soraka - The Starchild", type = MENU, leftIcon = "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Soraka.png"})
+	self.Menu = MenuElement( {id = "SB"..myHero.charName, name = "Soraka - The Starchild", type = MENU})
 	self.Menu:MenuElement({id = "Key", name = "> Key Settings", type = MENU})
 	self.Menu.Key:MenuElement({id = "Combo",name = "Combo", key = 32})
 	self.Menu.Key:MenuElement({id = "Harass",name = "Harass", key = string.byte("C")})
@@ -1117,7 +1117,7 @@ function Soraka:LoadMenu()
 	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
 	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
 	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	PrintChat("")
 end
 
 function Soraka:LoadData()
@@ -1275,7 +1275,7 @@ function Soraka:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
@@ -1340,10 +1340,10 @@ function Sona:LoadMenu()
 	self.Menu.Rset:MenuElement({id = "RHit", name = "Min enemies hit",value = 3, min = 1, max = 5,step = 1})
 	
 	self.Menu:MenuElement({type = MENU, id = "Draw",name = "> Draw Settings"})
-	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = true})
-	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = true})
-	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = true})
-	PrintChat("SupportBundle: "..myHero.charName.." Loaded")
+	self.Menu.Draw:MenuElement({id = "Q", name = "Draw Q Range", value = false})
+	self.Menu.Draw:MenuElement({id = "W", name = "Draw W Range", value = false})
+	self.Menu.Draw:MenuElement({id = "E", name = "Draw E Range", value = false})
+	PrintChat("")
 end
 
 function Sona:LoadData()
@@ -1501,7 +1501,7 @@ function Sona:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
@@ -1776,7 +1776,7 @@ function Karma:WndMsg(msg,key)
 		end
 		if starget then
 			self.SelectedTarget = starget
-			print("New target selected: "..starget.charName)
+			print("")
 		else
 			self.SelectedTarget = nil
 		end
