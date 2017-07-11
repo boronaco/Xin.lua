@@ -526,7 +526,7 @@ Callback.Add("Load", function()
 	if not _G.Prediction_Loaded then return end
 	if _G[myHero.charName] then
 		_G[myHero.charName]()
-		print("TRS "..ScriptVersion..": "..myHero.charName.."  Loaded")
-	else print ("TRS doens't support "..myHero.charName.." shutting down...") return
+		print("")
+	else print ("") return
 	end
 end)
