@@ -1,7 +1,10 @@
 local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true, Ashe = true, Ezreal = true, Lucian = true, Caitlyn = true, Twitch = true, KogMaw = true, Kalista = true, Corki = true}
 
-
+        if not myHeroes[myHero.charName] then return end
 	require "2DGeometry"
+
+         require "DamageLib"
+
 	
 	
 	keybindings = { [ITEM_1] = HK_ITEM_1, [ITEM_2] = HK_ITEM_2, [ITEM_3] = HK_ITEM_3, [ITEM_4] = HK_ITEM_4, [ITEM_5] = HK_ITEM_5, [ITEM_6] = HK_ITEM_6}
@@ -67,9 +70,6 @@ local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Kar
 end
 
 
-if not myHeroes[myHero.charName] then return end
-
-require "DamageLib"
 
 class "_AutoInterrupter"
 function _AutoInterrupter:__init()
