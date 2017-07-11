@@ -1,10 +1,74 @@
-local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true}
+local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Karma = true }
+
 if myHero.charName == "Ashe" or myHero.charName == "Ezreal" or myHero.charName == "Lucian" or myHero.charName == "Caitlyn" or myHero.charName == "Twitch" or myHero.charName == "KogMaw" or myHero.charName == "Kalista" or myHero.charName == "Corki" then
+	require "2DGeometry"
 	
+	
+	keybindings = { [ITEM_1] = HK_ITEM_1, [ITEM_2] = HK_ITEM_2, [ITEM_3] = HK_ITEM_3, [ITEM_4] = HK_ITEM_4, [ITEM_5] = HK_ITEM_5, [ITEM_6] = HK_ITEM_6}
+	
+	castSpell = {state = 0, tick = GetTickCount(), casting = GetTickCount() - 1000, mouse = mousePos}
+	function SetMovement(bool)
+		if _G.EOWLoaded then
+			EOW:SetMovements(bool)
+			EOW:SetAttacks(bool)
+		elseif _G.SDK then
+			_G.SDK.Orbwalker:SetMovement(bool)
+			_G.SDK.Orbwalker:SetAttack(bool)
+		else
+			GOS.BlockMovement = not bool
+			GOS.BlockAttack = not bool
+		end
+		if bool then
+			castSpell.state = 0
+		end
+	end
+	
+	function CurrentModes()
+		local combomodeactive, harassactive, canmove, canattack, currenttarget
+		if _G.SDK then -- ic orbwalker
+			combomodeactive = _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_COMBO]
+			harassactive = _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_HARASS]
+			canmove = _G.SDK.Orbwalker:CanMove()
+			canattack = _G.SDK.Orbwalker:CanAttack()
+			currenttarget = _G.SDK.TargetSelector.SelectedTarget or _G.SDK.Orbwalker:GetTarget()
+		elseif _G.EOW then -- eternal orbwalker
+			combomodeactive = _G.EOW:Mode() == 1
+			harassactive = _G.EOW:Mode() == 2
+			canmove = _G.EOW:CanMove() 
+			canattack = _G.EOW:CanAttack()
+			currenttarget = _G.EOW:GetTarget()
+		else -- default orbwalker
+			combomodeactive = _G.GOS:GetMode() == "Combo"
+			harassactive = _G.GOS:GetMode() == "Harass"
+			canmove = _G.GOS:CanMove()
+			canattack = _G.GOS:CanAttack()
+			currenttarget = _G.GOS:GetTarget()
+		end
+		return combomodeactive, harassactive, canmove, canattack, currenttarget
+	end
+	
+	function GetInventorySlotItem(itemID)
+		assert(type(itemID) == "number", "GetInventorySlotItem: wrong argument types (<number> expected)")
+		for _, j in pairs({ ITEM_1, ITEM_2, ITEM_3, ITEM_4, ITEM_5, ITEM_6}) do
+			if myHero:GetItemData(j).itemID == itemID and myHero:GetSpellData(j).currentCd == 0 then return j end
+		end
+		return nil
+	end
+	
+	function UseBotrk()
+		local target = (_G.SDK and _G.SDK.TargetSelector:GetTarget(300, _G.SDK.DAMAGE_TYPE_PHYSICAL)) or (_G.GOS and _G.GOS:GetTarget(300,"AD"))
+		if target then 
+			local botrkitem = GetInventorySlotItem(3153) or GetInventorySlotItem(3144)
+			if botrkitem then
+				Control.CastSpell(keybindings[botrkitem],target.pos)
+			end
+		end
+	end
+end
 
 
 if not myHeroes[myHero.charName] then return end
-require "2DGeometry"
+
 require "DamageLib"
 
 class "_AutoInterrupter"
@@ -1787,71 +1851,7 @@ function Karma:WndMsg(msg,key)
 end
 
 Callback.Add("Load",function() _G[myHero.charName]() end)
-if myHero.charName == "Ashe" or myHero.charName == "Ezreal" or myHero.charName == "Lucian" or myHero.charName == "Caitlyn" or myHero.charName == "Twitch" or myHero.charName == "KogMaw" or myHero.charName == "Kalista" or myHero.charName == "Corki" then
-	require "2DGeometry"
-	
-	
-	keybindings = { [ITEM_1] = HK_ITEM_1, [ITEM_2] = HK_ITEM_2, [ITEM_3] = HK_ITEM_3, [ITEM_4] = HK_ITEM_4, [ITEM_5] = HK_ITEM_5, [ITEM_6] = HK_ITEM_6}
-	
-	castSpell = {state = 0, tick = GetTickCount(), casting = GetTickCount() - 1000, mouse = mousePos}
-	function SetMovement(bool)
-		if _G.EOWLoaded then
-			EOW:SetMovements(bool)
-			EOW:SetAttacks(bool)
-		elseif _G.SDK then
-			_G.SDK.Orbwalker:SetMovement(bool)
-			_G.SDK.Orbwalker:SetAttack(bool)
-		else
-			GOS.BlockMovement = not bool
-			GOS.BlockAttack = not bool
-		end
-		if bool then
-			castSpell.state = 0
-		end
-	end
-	
-	function CurrentModes()
-		local combomodeactive, harassactive, canmove, canattack, currenttarget
-		if _G.SDK then -- ic orbwalker
-			combomodeactive = _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_COMBO]
-			harassactive = _G.SDK.Orbwalker.Modes[_G.SDK.ORBWALKER_MODE_HARASS]
-			canmove = _G.SDK.Orbwalker:CanMove()
-			canattack = _G.SDK.Orbwalker:CanAttack()
-			currenttarget = _G.SDK.TargetSelector.SelectedTarget or _G.SDK.Orbwalker:GetTarget()
-		elseif _G.EOW then -- eternal orbwalker
-			combomodeactive = _G.EOW:Mode() == 1
-			harassactive = _G.EOW:Mode() == 2
-			canmove = _G.EOW:CanMove() 
-			canattack = _G.EOW:CanAttack()
-			currenttarget = _G.EOW:GetTarget()
-		else -- default orbwalker
-			combomodeactive = _G.GOS:GetMode() == "Combo"
-			harassactive = _G.GOS:GetMode() == "Harass"
-			canmove = _G.GOS:CanMove()
-			canattack = _G.GOS:CanAttack()
-			currenttarget = _G.GOS:GetTarget()
-		end
-		return combomodeactive, harassactive, canmove, canattack, currenttarget
-	end
-	
-	function GetInventorySlotItem(itemID)
-		assert(type(itemID) == "number", "GetInventorySlotItem: wrong argument types (<number> expected)")
-		for _, j in pairs({ ITEM_1, ITEM_2, ITEM_3, ITEM_4, ITEM_5, ITEM_6}) do
-			if myHero:GetItemData(j).itemID == itemID and myHero:GetSpellData(j).currentCd == 0 then return j end
-		end
-		return nil
-	end
-	
-	function UseBotrk()
-		local target = (_G.SDK and _G.SDK.TargetSelector:GetTarget(300, _G.SDK.DAMAGE_TYPE_PHYSICAL)) or (_G.GOS and _G.GOS:GetTarget(300,"AD"))
-		if target then 
-			local botrkitem = GetInventorySlotItem(3153) or GetInventorySlotItem(3144)
-			if botrkitem then
-				Control.CastSpell(keybindings[botrkitem],target.pos)
-			end
-		end
-	end
-end
+
 
 if myHero.charName == "Ashe" then
 	class "Ashe"
