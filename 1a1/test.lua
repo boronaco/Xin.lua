@@ -67,7 +67,7 @@ local myHeroes = { Morgana = true, Janna = true, Nami = true, Soraka = true, Kar
 			end
 		end
 	end
-end
+
 
 
 
